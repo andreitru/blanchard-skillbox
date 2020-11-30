@@ -25,7 +25,7 @@ const htmlmin = require('gulp-htmlmin');
 // DEV
 //svg sprite
 const svgSprites = () => {
-  return src('./src/img/svg/**.svg')
+  return src('./src/img/**.svg')
     .pipe(svgSprite({
       mode: {
         stack: {
@@ -42,7 +42,7 @@ const resources = () => {
 }
 
 const imgToApp = () => {
-	return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg', './src/img/*.svg'])
+	return src(['./src/img/**/**.jpg', './src/img/**/**.png', './src/img/**/**.jpeg', './src/img/**/**.svg'])
     .pipe(dest('./app/img'))
 }
 
@@ -222,7 +222,7 @@ exports.default = series(clean, parallel(htmlInclude, scripts, fonts, resources,
 
 // BUILD
 const tinypng = () => {
-  return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg'])
+  return src(['./src/img/**/**.jpg', './src/img/**/**.png', './src/img/**/**.jpeg'])
     .pipe(tiny({
       key: 'HkdjDW01hVL5Db6HXSYlnHMk9HCvQfDT',
       sigFile: './app/img/.tinypng-sigs',
