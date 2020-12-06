@@ -1,0 +1,194 @@
+.projects {
+  &__container {
+    padding-top: 86px;
+    padding-bottom: 80px;
+  }
+
+  &__text {
+    margin-bottom: 21px;
+    max-width: 65.7%;
+
+    span {
+      position: relative;
+      display: inline-block;
+      border: 1px solid var(--color-amethyst);
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      transition: background-color 0.3s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 55%;
+        border-style: solid;
+        border-width: 10px;
+        border-color: var(--color-telegrey) transparent transparent transparent;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        transform: translateX(-50%);
+        transition: opacity 0.3s;
+      }
+
+      &::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        left: 50%;
+        bottom: 200%;
+        padding: 10px;
+        width: 264px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        color: var(--color-white);
+        background-color: var(--color-telegrey);
+        opacity: 0;
+        transform: translateX(-50%);
+        transition: opacity 0.3s;
+      }
+
+      svg {
+        position: absolute;
+        right: 35%;
+        top: 50%;
+        display: block;
+        width: 2px;
+        height: 10px;
+        text-align: center;
+        fill: var(--color-amethyst);
+        transform: translate(-50%, -50%);
+        transition: fill 0.3s;
+      }
+
+      &:hover {
+        background-color: var(--color-amethyst);
+        transition: background-color 0.3s;
+
+        &::before {
+          opacity: 1;
+          transition: opacity 0.3s;
+        }
+
+        &::after {
+          opacity: 1;
+          transition: opacity 0.3s;
+        }
+
+        svg {
+          fill: var(--color-white);
+          transition: fill 0.3s;
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 22px;
+  }
+
+  &__bottom {
+    position: relative;
+    margin: 0 auto;
+    padding-right: 4.7%;
+    padding-left: 4.7%;
+  }
+}
+
+.projects-slider {
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 150px;
+
+  &__slide {
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    max-height: 150px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    &--1 {
+      background-image: url('../img/projects/freelands.jpg');
+
+      &:hover {
+        background-image: url('../img/projects/freelands-color.jpg');
+      }
+    }
+
+    &--2 {
+      background-image: url('../img/projects/institute.jpg');
+
+      &:hover {
+        background-image: url('../img/projects/institute-color.jpg');
+      }
+    }
+
+    &--3 {
+      background-image: url('../img/projects/workhouse.jpg');
+
+      &:hover {
+        background-image: url('../img/projects/workhouse-color.jpg');
+      }
+    }
+
+    &--4 {
+      background-image: url('../img/projects/1849.jpg');
+
+      &:hover {
+        background-image: url('../img/projects/1849-color.jpg');
+      }
+    }
+
+    &--5 {
+      background-image: url('../img/projects/hiscox.jpg');
+
+      &:hover {
+        background-image: url('../img/projects/hiscox-color.jpg');
+      }
+    }
+
+    &--6 {
+      background-image: url('../img/projects/camden.jpg');
+
+      &:hover {
+        background-image: url('../img/projects/camden-color.jpg');
+      }
+    }
+
+    &--7 {
+      background-image: url('../img/projects/stassen.jpg');
+
+      &:hover {
+        background-image: url('../img/projects/stassen-color.jpg');
+      }
+    }
+
+    &--8 {
+      background-image: url('../img/projects/watts.jpg');
+
+      &:hover {
+        background-image: url('../img/projects/watts-color.jpg');
+      }
+    }
+
+    &--9 {
+      background-image: url('../img/projects/esad.jpg');
+
+      &:hover {
+        background-image: url('../img/projects/esad-color.jpg');
+      }
+    }
+  }
+
+  &__prev-btn,
+  &__next-btn {
+    top: 55%;
+  }
+}

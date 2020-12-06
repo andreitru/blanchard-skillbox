@@ -195,14 +195,14 @@ const watchFiles = () => {
   });
 
   watch('./src/scss/**/*.scss', styles);
-  watch('./src/js/**/*.js', scripts);
+  watch('./src/js/**/**.js', scripts);
   watch('./src/html/*.html', htmlInclude);
   watch('./src/*.html', htmlInclude);
   watch('./src/resources/**', resources);
   watch('./src/img/**.jpg', imgToApp);
   watch('./src/img/**.jpeg', imgToApp);
   watch('./src/img/**.png', imgToApp);
-  watch('./src/img/svg/**.svg', svgSprites);
+  watch('./src/img/**/**.svg', svgSprites);
   watch('./src/fonts/**', fonts);
   watch('./src/fonts/**', fontsStyle);
 }

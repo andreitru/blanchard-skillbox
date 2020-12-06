@@ -1,3 +1,125 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="header__top header-top">
+    <div class="container header-top__container">
+      <a href="#" class="logo header-top__logo">
+        <img src="img/logo.png" alt="Логотип Blanchard">
+      </a>
+      <nav class="nav header-top__nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#about" class="nav__link link">О нас</a></li>
+          <li class="nav__item"><a href="#gallery" class="nav__link link">Галерея</a></li>
+          <li class="nav__item"><a href="#catalog" class="nav__link link">Каталог</a></li>
+          <li class="nav__item"><a href="#events" class="nav__link link">События</a></li>
+          <li class="nav__item"><a href="#editions" class="nav__link link">Издания</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link link">Проекты</a></li>
+          <li class="nav__item"><a href="#contacts" class="nav__link link">Контакты</a></li>
+        </ul>
+        <button class="btn-reset nav__btn">Войти</button>
+      </nav>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container header-bottom__container">
+      <div class="header-bottom__select ">
+        <div class="select__realism header-select">
+          <div class="header-select__top">Реализм
+            <svg>
+              <use xlink:href="img/sprite.svg#arrow"></use>
+            </svg>
+          </div>
+          <div class="header-select__dropdown" id="scrollbar">
+            <ul class="header-select__list">
+              <li class="header-select__item">Авилов</li>
+              <li class="header-select__item">Баженов</li>
+              <li class="header-select__item">Вайреда</li>
+              <li class="header-select__item">Гай</li>
+              <li class="header-select__item">Дадлез</li>
+              <li class="header-select__item">Ерёмин</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="header-select__impressionism header-select">
+          <div class="header-select__top">Импрессионизм
+            <svg>
+              <use xlink:href="img/sprite.svg#arrow"></use>
+            </svg>
+          </div>
+          <div class="header-select__dropdown">
+            <ul class="header-select__list">
+              <li class="header-select__item">Мане</li>
+              <li class="header-select__item">Моне</li>
+              <li class="header-select__item">Ренуар</li>
+              <li class="header-select__item">Дега</li>
+              <li class="header-select__item">Моризо</li>
+              <li class="header-select__item">Писсарро</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="header-select__post-impressionism header-select">
+          <div class="header-select__top">Постимпрессионизм
+            <svg>
+              <use xlink:href="img/sprite.svg#arrow"></use>
+            </svg>
+          </div>
+          <div class="header-select__dropdown">
+            <ul class="header-select__list">
+              <li class="header-select__item">Сезанн</li>
+              <li class="header-select__item">Дюбуа-Пилле</li>
+              <li class="header-select__item">Гоген</li>
+              <li class="header-select__item">Мырквичка</li>
+              <li class="header-select__item">Ангран</li>
+              <li class="header-select__item">Ван Гог</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="header-select__vanguard header-select">
+          <div class="header-select__top">Авангард
+            <svg>
+              <use xlink:href="img/sprite.svg#arrow"></use>
+            </svg>
+          </div>
+          <div class="header-select__dropdown">
+            <ul class="header-select__list">
+              <li class="header-select__item">Малевич</li>
+              <li class="header-select__item">Кандинский</li>
+              <li class="header-select__item">Татлин</li>
+              <li class="header-select__item">Родченко</li>
+              <li class="header-select__item">Гончарова</li>
+              <li class="header-select__item">Попова</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="header-select__futurism header-select">
+          <div class="header-select__top">Футуризм
+            <svg>
+              <use xlink:href="img/sprite.svg#arrow"></use>
+            </svg>
+          </div>
+          <div class="header-select__dropdown">
+            <ul class="header-select__list">
+              <li class="header-select__item">Тинторетто</li>
+              <li class="header-select__item">Фридрих</li>
+              <li class="header-select__item">Леонардо</li>
+              <li class="header-select__item">Вероккьо</li>
+              <li class="header-select__item">Бала</li>
+              <li class="header-select__item">Боччиони</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom__search search">
+        <label for="search">
+          <svg>
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg>
+          <input type="text" id="search" class="search__input input" placeholder="Поиск по сайту">
+        </label>
+
+      </div>
+    </div>
+  </div>
 </header>
