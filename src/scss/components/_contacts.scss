@@ -1,21 +1,54 @@
 .contacts {
-  position: relative;
   padding-top: 7px;
-  padding-bottom: 0;
+  padding-bottom: 5px;
 
   &__container {
     overflow: hidden;
     border-top: 1px solid var(--color-telegrey);
-    height: 700px;
+
+    @include xs {
+      position: relative;
+      border: none;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include xs {
+      flex-direction: column;
+    }
   }
 
   &__left {
     width: 32.5%;
+
+    @include md {
+      width: 47.2%;
+    }
+
+    @include mobile-sm {
+      width: 67.1%;
+    }
+
+    @include xs {
+      width: 100%;
+    }
   }
 
   &__right {
-    width: 64.6%;
-    height: 700px;
+    margin-right: -10%;
+    width: 77.6%;
+
+    @include md {
+      width: 62.8%;
+    }
+
+    @include xs {
+      width: 100%;
+    }
   }
 }
 
@@ -26,14 +59,30 @@
 
   &__address-title {
     margin-bottom: 4px;
+
+    @include xs {
+      margin-bottom: 0;
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
 
   &__address {
     margin-bottom: 29px;
+
+    @include xs {
+      margin-bottom: 336px;
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__back-call {
     font-weight: 400;
+
+    @include xs {
+      font-size: 18px;
+    }
   }
 
   &__form {
@@ -55,6 +104,15 @@
         font-size: 16px;
         color: var(--color-light-gray);
       }
+
+      @include mobile-sm {
+        width: 88%;
+      }
+
+      @include xs {
+        width: 100%;
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -63,11 +121,22 @@
     padding: 18px 35px;
     font-weight: 600;
     color: var(--color-amethyst);
+
+    @include xs {
+      margin-top: 10px;
+      padding: 12px 34px;
+      font-size: 12px;
+    }
   }
 
   &__social-title {
     margin-top: 37px;
     font-weight: 400;
+
+    @include xs {
+      margin-top: 19px;
+      font-size: 18px;
+    }
   }
 
   &__social {
@@ -75,6 +144,10 @@
     align-items: center;
     justify-content: flex-start;
     margin-top: 14px;
+
+    @include xs {
+      margin-top: 7px;
+    }
   }
 
   &__social-btn {
@@ -94,14 +167,23 @@
       background-image: url('../img/contacts/telegram.svg');
     }
   }
+
+  @include xs {
+    border-right: none;
+    padding-top: 0;
+    padding-bottom: 35px;
+  }
 }
 
 .contacts-right {
-  position: absolute;
-  left: 35.5%;
-  top: 82px;
+  position: relative;
+  right: 0;
+  top: -1px;
 
   &__map {
+    position: absolute;
+    right: 0;
+    top: 0;
     width: 100%;
     height: 700px;
 
@@ -112,5 +194,14 @@
     [class*="ground-pane"] {
       filter: grayscale(100%);
     }
+
+    @include xs {
+      top: 65px;
+      height: 320px;
+    }
+  }
+
+  @include xs {
+    position: unset;
   }
 }

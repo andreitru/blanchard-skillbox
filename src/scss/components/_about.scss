@@ -2,10 +2,19 @@
   &__container {
     padding-top: 87px;
     padding-bottom: 69px;
+
+    @include xs {
+      padding-top: 53px;
+      padding-bottom: 42px;
+    }
   }
 
   &__text {
     width: 100%;
     max-width: 1086px;
+
+    @include xs {
+      font-size: 14px;
+    }
   }
 }

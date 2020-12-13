@@ -72,7 +72,7 @@ ul {
   padding: 0 50px;
   max-width: 1700px;
 
-  @include sm {
+  @include xs {
     padding: 0 15px;
   }
 }
@@ -95,6 +95,10 @@ ul {
   font-weight: 400;
   font-size: 18px;
   cursor: pointer;
+
+  @include xs {
+    padding: 10px 15px;
+  }
 }
 
 .title {
@@ -103,13 +107,18 @@ ul {
   font-weight: 400;
   font-size: 48px;
   color: var(--color-signal-black);
+
+  @include xs {
+    margin-bottom: 15px;
+    font-size: 28px;
+  }
 }
 
 .text {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  line-height: 32px;
+  line-height: 200%;
   color: var(--color-signal-black);
 }
 
@@ -131,6 +140,45 @@ ul {
   margin: 0;
   font-weight: 600;
   font-size: 24px;
-  line-height: 32px;
+  line-height: 178%;
   color: var(--color-signal-black);
+}
+
+.pagination-block {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 22px;
+  width: 130px;
+  height: 30px;
+
+  &__pagination {
+    top: 0;
+    color: var(--color-white);
+  }
+
+  &__button-next,
+  &__button-prev {
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    border-radius: 50%;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-dull-gray);
+
+    &::after {
+      font-size: inherit;
+      color: var(--color-white);
+    }
+  }
+
+  &__button-prev {
+    left: 0;
+  }
+
+  @include xs {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

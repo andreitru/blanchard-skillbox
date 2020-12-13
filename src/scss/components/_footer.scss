@@ -7,6 +7,23 @@
     justify-content: space-between;
     padding-top: 47px;
     padding-bottom: 47px;
+
+    @include xs {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__logo {
+    img {
+      @include md {
+        width: 173px;
+      }
+
+      @include xs {
+        width: 97px;
+      }
+    }
   }
 }
 
@@ -25,6 +42,10 @@
 
     &:not(:last-child) {
       margin-right: 20px;
+
+      @include xs {
+        margin-right: 13px;
+      }
     }
 
     &--vk {
@@ -37,6 +58,11 @@
 
     &--fb {
       background-image: url("../img/footer/fb.svg");
+    }
+
+    @include xs {
+      width: 25px;
+      height: 25px;
     }
   }
 }

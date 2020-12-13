@@ -11,6 +11,10 @@
 
   &__bottom {
     background-color: rgba(0, 0, 0, 0.4);
+
+    @include md {
+      display: none;
+    }
   }
 }
 
@@ -19,12 +23,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 24px;
-    padding-bottom: 19px;
-  }
+    height: 100px;
 
-  &__logo {
-    min-width: 173px;
+    @include xs {
+      height: 45px;
+    }
+  }
+}
+
+.logo {
+  img {
+    width: 173px;
+
+    @include md {
+      width: 187px;
+    }
+
+    @include xs {
+      width: 97px;
+    }
   }
 }
 
@@ -38,11 +55,23 @@
     align-items: center;
     justify-content: space-between;
     margin-right: 280px;
+
+    @include lg-max {
+      margin-right: 150px;
+    }
+
+    @include lg {
+      margin-right: 70px;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 62px;
+
+      @include lg {
+        margin-right: 30px;
+      }
     }
   }
 
@@ -60,6 +89,10 @@
     font-size: 18px;
     color: var(--color-white);
     background: url('../img/login.svg') no-repeat left center;
+  }
+
+  @include md {
+    display: none;
   }
 }
 
@@ -85,6 +118,10 @@
 
   &:not(:last-child) {
     margin-right: 101px;
+
+    @include lg {
+      margin-right: 40px;
+    }
   }
 
   &__top {
@@ -120,7 +157,6 @@
   }
 
   &__list {
-    //display: block;
     display: none;
     width: 100%;
     height: 50px;
@@ -182,6 +218,89 @@
 
   &:focus-within {
     outline: 2px solid var(--color-krayola);
+  }
+
+  &--mobile {
+    display: none;
+
+    label {
+      svg {
+        margin-right: 0;
+        width: 29px;
+        height: 29px;
+
+        @include xs {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    @include md {
+      display: block;
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  display: none;
+  width: 36px;
+  height: 28px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-white);
+
+    @include xs {
+      height: 2px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 68%;
+    height: 4px;
+    background-color: var(--color-white);
+
+    @include xs {
+      height: 2px;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 78%;
+    height: 4px;
+    background-color: var(--color-white);
+    transform: translateY(-50%);
+
+    @include xs {
+      height: 2px;
+    }
+  }
+
+  @include md {
+    display: block;
+  }
+
+  @include xs {
+    width: 20px;
+    height: 15px;
   }
 }
 

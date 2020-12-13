@@ -2,6 +2,14 @@
   &__container {
     padding-top: 74px;
     padding-bottom: 80px;
+
+    @include mobile-sm {
+      padding-bottom: 70px;
+    }
+
+    @include xs {
+      padding-bottom: 46px;
+    }
   }
 }
 
@@ -14,12 +22,29 @@
   &__title {
     margin-top: 11px;
     margin-right: 39px;
+
+    @include xs {
+      margin-bottom: -3px;
+    }
   }
 
   &__text {
     margin-bottom: 40px;
     width: 100%;
     max-width: 1100px;
+
+    @include mobile-sm {
+      margin-bottom: 21px;
+    }
+
+    @include xs {
+      display: none;
+    }
+  }
+
+  @include xs {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -40,6 +65,14 @@
 
     &:not(:last-child) {
       margin-right: 50px;
+
+      @include mobile-sm {
+        margin-right: 54px;
+      }
+
+      @include xs {
+        margin-right: 32px;
+      }
     }
 
     &--france {
@@ -73,7 +106,18 @@
         width: 66px;
         height: 66px;
         transform: translate(-50%, -50%);
+
+        @include xs {
+          width: 44px;
+          height: 44px;
+        }
       }
+    }
+
+    @include xs {
+      margin-bottom: 4px;
+      width: 32px;
+      height: 32px;
     }
   }
 }
@@ -85,20 +129,57 @@
 
   &__left {
     width: 47%;
+
+    @include lg {
+      width: 40%;
+    }
+
+    @include mobile {
+      width: 47%;
+    }
+
+    @include mobile-sm {
+      padding-top: 51px;
+      width: 100%;
+    }
   }
 
   &__right {
     width: 50%;
+
+    @include lg {
+      width: 57%;
+    }
+
+    @include mobile {
+      width: 47%;
+    }
+
+    @include mobile-sm {
+      width: 100%;
+    }
+  }
+
+  @include mobile-sm {
+    flex-direction: column-reverse;
   }
 }
 
 .painter {
   &__name {
-    margin: 28px 0 5px;
+    margin: 23px 0 5px;
+
+    @include xs {
+      margin-top: 10px;
+    }
   }
 
   &__text {
-    margin-top: 6px;
+    margin-top: 2px;
+
+    @include xs {
+      margin-top: 9px;
+    }
   }
 }
 
@@ -130,33 +211,70 @@
         height: 15px;
         fill: var(--color-black);
         transform: translate(-50%, -50%);
+
+        @include xs {
+          width: 11px;
+          height: 11px;
+        }
+      }
+
+      @include xs {
+        width: 30px;
+        height: 30px;
       }
     }
 
     &:first-child {
       border-top: 1px solid var(--color-telegrey);
     }
-  }
 
-  &__lists {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
-  &__list {
-    padding-top: 10px;
-    padding-bottom: 11px;
-
-    &:not(:last-child) {
-      margin-right: 70px;
+    @include xs {
+      padding-top: 20px;
+      padding-bottom: 21px;
+      font-size: 18px;
     }
   }
 
+  &__lists {
+    padding-top: 25px;
+    padding-bottom: 28px;
+
+    @include mobile {
+      padding-bottom: 3px;
+    }
+
+    @include mobile-sm {
+      padding-bottom: 28px;
+    }
+
+    @include xs {
+      padding-top: 17px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+
   &__item {
+    margin-right: 5px;
+    width: 30%;
     font-size: 16px;
     line-height: 32px;
+    white-space: nowrap;
+
+    @include md {
+      width: 55%;
+    }
+
+    @include mobile-sm {
+      width: 35%;
+    }
   }
 
   &__link {

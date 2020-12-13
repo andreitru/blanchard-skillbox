@@ -14,10 +14,20 @@
   &__container {
     padding-top: 232px;
     padding-bottom: 123px;
+
+    @include md {
+      padding-top: 208px;
+      padding-bottom: 115px;
+    }
+
+    @include xs {
+      padding-top: 78px;
+      padding-bottom: 45px;
+    }
   }
 
   &__title {
-    margin: 0 0 0 -5px;
+    margin: 0 0 18px -5px;
     padding: 5px 0 0;
     width: 100%;
     max-width: 570px;
@@ -25,24 +35,65 @@
     line-height: 85px;
     letter-spacing: 1.9px;
     color: var(--color-white);
+
+    @include md {
+      margin-bottom: 9px;
+    }
+
+    @include sm {
+      letter-spacing: 1px;
+    }
+
+    @include xs {
+      margin-bottom: 12px;
+      padding: 0 18px;
+      font-size: 32px;
+      line-height: 38px;
+      letter-spacing: unset;
+      text-align: center;
+    }
   }
 
   &__text {
-    margin-bottom: 93px;
+    margin: 0 0 93px;
     width: 100%;
     max-width: 580px;
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 1px;
     color: var(--color-white);
+
+    @include md {
+      margin-bottom: 132px;
+      max-width: 670px;
+    }
+
+    @include xs {
+      margin-right: auto;
+      margin-bottom: 40px;
+      margin-left: auto;
+      padding: 0 14px;
+      max-width: 450px;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: normal;
+      text-align: center;
+    }
   }
 
   &__btn {
+    display: block;
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
     letter-spacing: 0.4px;
     color: var(--color-white);
     background-color: var(--color-amethyst);
+
+    @include xs {
+      margin: 0 auto;
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 }

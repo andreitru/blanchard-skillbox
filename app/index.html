@@ -14,9 +14,20 @@
   <header class="header">
   <div class="header__top header-top">
     <div class="container header-top__container">
+      <button class="burger btn-reset header__burger">
+        <span class="burger__line"></span>
+      </button>
       <a href="#" class="logo header-top__logo">
         <img src="img/logo.png" alt="Логотип Blanchard">
       </a>
+      <div class="search search--mobile">
+        <label for="search">
+          <svg>
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg>
+          <input type="text" class="search__input input" placeholder="Поиск по сайту">
+        </label>
+      </div>
       <nav class="nav header-top__nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="#about" class="nav__link link">О нас</a></li>
@@ -131,29 +142,43 @@
           </svg>
           <input type="text" id="search" class="search__input input" placeholder="Поиск по сайту">
         </label>
-
       </div>
     </div>
   </div>
 </header>
 
-  <section class="hero">
-  <img src="img/hero/hero-1.jpg" alt="главное фото" class="hero__img">
+  <main>
+    <section class="hero">
+  <picture>
+    <source media="(min-width: 1025px)" srcset="img/hero/hero-1.jpg">
+    <source media="(min-width: 769px)" srcset="img/hero/hero-1-1024.jpg">
+    <source media="(min-width: 321px)" srcset="img/hero/hero-1-768.jpg">
+    <source media="(min-width: 320px)" srcset="img/hero/hero-1-320.jpg">
+    <img src="img/hero/hero-1.jpg" alt="главное фото" class="hero__img">
+  </picture>
   <div class="container hero__container">
     <h1 class="hero__title">Прикоснитесь к прекрасному</h1>
-    <p class="hero__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+    <p class="hero__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт
+      предпосылки для новых предложений.</p>
     <button class="btn-reset btn hero__btn">Подписаться на рассылку</button>
   </div>
 </section>
 
-  <section class="about">
+    <section class="about">
   <div class="container about__container">
     <h2 class="title about__title">О нас</h2>
-    <p class="text about__text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
+    <p class="text about__text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно
+      определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних
+      резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за
+      собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество
+      позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных
+      мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных
+      стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит,
+      должны быть разоблачены.</p>
   </div>
 </section>
 
-  <section class="gallery">
+    <section class="gallery">
   <div class="container gallery__container">
     <div class="gallery__left gallery-left">
       <div class="gallery-left__top">
@@ -181,36 +206,146 @@
 
     <div class="gallery__right">
 
-      <div class="swiper-container">
-        <div class="swiper-pagination-block">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
+      <div class="gallery-slider swiper-container">
+        <div class="gallery-slider__pagination-block pagination-block">
+          <div class="pagination-block__button-prev swiper-button-prev"></div>
+          <div class="pagination-block__pagination swiper-pagination"></div>
+          <div class="pagination-block__button-next swiper-button-next"></div>
         </div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="img/gallery/gallery-1.jpg" alt="Картина 1"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-2.jpg" alt="Картина 2"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-3.jpg" alt="Картина 3"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-4.jpg" alt="Картина 4"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-5.jpg" alt="Картина 5"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-6.jpg" alt="Картина 6"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-7.jpg" alt="Картина 7"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-8.jpg" alt="Картина 8"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-9.jpg" alt="Картина 9"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-10.jpg" alt="Картина 10"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-11.jpg" alt="Картина 11"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-12.jpg" alt="Картина 12"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-13.jpg" alt="Картина 13"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-14.jpg" alt="Картина 14"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-15.jpg" alt="Картина 15"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-16.jpg" alt="Картина 16"></div>
+        <div class="swiper-wrapper gallery-slider__wrapper">
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-1.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-1-320.jpg">
+              <img src="img/gallery/gallery-1.jpg" alt="Картина 1">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-2.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-2-320.jpg">
+              <img src="img/gallery/gallery-2.jpg" alt="Картина 2">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-3.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-3-320.jpg">
+              <img src="img/gallery/gallery-3.jpg" alt="Картина 3">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-4.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-4-320.jpg">
+              <img src="img/gallery/gallery-4.jpg" alt="Картина 4">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-5.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-5-320.jpg">
+              <img src="img/gallery/gallery-5.jpg" alt="Картина 5">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-6.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-6-320.jpg">
+              <img src="img/gallery/gallery-6.jpg" alt="Картина 6">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-7.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-7-320.jpg">
+              <img src="img/gallery/gallery-7.jpg" alt="Картина 7">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-8.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-8-320.jpg">
+              <img src="img/gallery/gallery-8.jpg" alt="Картина 8">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-9.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-9-320.jpg">
+              <img src="img/gallery/gallery-9.jpg" alt="Картина 9">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-10.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-10-320.jpg">
+              <img src="img/gallery/gallery-10.jpg" alt="Картина 10">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-11.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-11-320.jpg">
+              <img src="img/gallery/gallery-11.jpg" alt="Картина 11">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-12.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-12-320.jpg">
+              <img src="img/gallery/gallery-12.jpg" alt="Картина 12">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-13.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-13-320.jpg">
+              <img src="img/gallery/gallery-13.jpg" alt="Картина 13">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-14.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-14-320.jpg">
+              <img src="img/gallery/gallery-14.jpg" alt="Картина 14">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-15.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-15-320.jpg">
+              <img src="img/gallery/gallery-15.jpg" alt="Картина 15">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-16.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-16-320.jpg">
+              <img src="img/gallery/gallery-16.jpg" alt="Картина 16">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-17.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-17-320.jpg">
+              <img src="img/gallery/gallery-17.jpg" alt="Картина 17">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-18.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-18-320.jpg">
+              <img src="img/gallery/gallery-18.jpg" alt="Картина 18">
+            </picture>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-  <section class="catalog">
+    <section class="catalog">
   <div class="container catalog__container">
     <div class="catalog__top catalog-top">
       <h2 class="catalog-top__title title">Каталог</h2>
@@ -262,19 +397,16 @@
             <li class="accordion__item"><a href="#" class="accordion__link">Брамантино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бреа, Людовико</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бьяджо д’Антонио Туччи</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Веккьетта</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Андреа Верроккьо</a></li>
-            <li class="accordion__item"><a href="#" class="accordion__link accordion__link--active">Доменико Гирландайо</a></li>
+            <li class="accordion__item"><a href="#" class="accordion__link accordion__link--active">Доменико
+              Гирландайо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Беноццо Гоццоли</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Граначчи, Франческо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Грегорио ди Чекко</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни да Удине</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни ди Паоло</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джорджоне</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Парентино, Бернардо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пезеллино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пьетро Перуджино</a></li>
@@ -299,8 +431,6 @@
             <li class="accordion__item"><a href="#" class="accordion__link">Брамантино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бреа, Людовико</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бьяджо д’Антонио Туччи</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Веккьетта</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Андреа Верроккьо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Доменико Гирландайо</a></li>
@@ -310,8 +440,6 @@
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни да Удине</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни ди Паоло</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джорджоне</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Парентино, Бернардо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пезеллино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пьетро Перуджино</a></li>
@@ -336,8 +464,6 @@
             <li class="accordion__item"><a href="#" class="accordion__link">Брамантино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бреа, Людовико</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бьяджо д’Антонио Туччи</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Веккьетта</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Андреа Верроккьо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Доменико Гирландайо</a></li>
@@ -347,8 +473,6 @@
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни да Удине</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни ди Паоло</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джорджоне</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Парентино, Бернардо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пезеллино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пьетро Перуджино</a></li>
@@ -373,8 +497,6 @@
             <li class="accordion__item"><a href="#" class="accordion__link">Брамантино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бреа, Людовико</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бьяджо д’Антонио Туччи</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Веккьетта</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Андреа Верроккьо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Доменико Гирландайо</a></li>
@@ -384,8 +506,6 @@
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни да Удине</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни ди Паоло</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джорджоне</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Парентино, Бернардо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пезеллино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пьетро Перуджино</a></li>
@@ -410,8 +530,6 @@
             <li class="accordion__item"><a href="#" class="accordion__link">Брамантино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бреа, Людовико</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бьяджо д’Антонио Туччи</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Веккьетта</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Андреа Верроккьо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Доменико Гирландайо</a></li>
@@ -421,8 +539,6 @@
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни да Удине</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни ди Паоло</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джорджоне</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Парентино, Бернардо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пезеллино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пьетро Перуджино</a></li>
@@ -447,8 +563,6 @@
             <li class="accordion__item"><a href="#" class="accordion__link">Брамантино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бреа, Людовико</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бьяджо д’Антонио Туччи</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Веккьетта</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Андреа Верроккьо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Доменико Гирландайо</a></li>
@@ -458,8 +572,6 @@
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни да Удине</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни ди Паоло</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джорджоне</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Парентино, Бернардо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пезеллино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пьетро Перуджино</a></li>
@@ -484,8 +596,6 @@
             <li class="accordion__item"><a href="#" class="accordion__link">Брамантино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бреа, Людовико</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Бьяджо д’Антонио Туччи</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Веккьетта</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Андреа Верроккьо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Доменико Гирландайо</a></li>
@@ -495,8 +605,6 @@
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни да Удине</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джованни ди Паоло</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Джорджоне</a></li>
-          </ul>
-          <ul class="accordion__list">
             <li class="accordion__item"><a href="#" class="accordion__link">Парентино, Бернардо</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пезеллино</a></li>
             <li class="accordion__item"><a href="#" class="accordion__link">Пьетро Перуджино</a></li>
@@ -510,148 +618,155 @@
   </div>
 </section>
 
-  <section class="events">
+    <section class="events">
   <div class="container events__container">
     <h2 class="events__title title">События</h2>
-    <ul class="events__list">
-      <li class="events__item event">
-        <img src="img/events/events-1.jpg" alt="Музей им. Щусева" class="event__img">
-        <div class="event__about">
-          <div class="event__spans">
-            <span class="event__place descr">Музей им. Щусева</span>
-            <span class="event__date descr">с 20 марта по 30 апреля</span>
-          </div>
-          <div class="event__descr event-descr">
-            <div class="event-descr__top">
-              <h3 class="event__title subtitle">Книжная гравюра в живом восприятии</h3>
-              <p class="text event__text">
-                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
-                продолжили
-                его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело.
-              </p>
+    <div class="swiper-container events-slider">
+      <ul class="events__list swiper-wrapper events-slider__wrapper">
+        <li class="events__item event swiper-slide">
+          <img src="img/events/events-1.jpg" alt="Музей им. Щусева" class="event__img">
+          <div class="event__about">
+            <div class="event__spans">
+              <span class="event__place descr">Музей им. Щусева</span>
+              <span class="event__date descr">с 20 марта по 30 апреля</span>
             </div>
-            <div class="event-descr__bottom">
-              <a href="#" class="event__link">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="events__item event">
-        <img src="img/events/events-2.jpg" alt="ММОМА" class="event__img">
-        <div class="event__about">
-          <div class="event__spans">
-            <span class="event__place descr">ММОМА</span>
-            <span class="event__date descr">24 марта 19:00</span>
-          </div>
-          <div class="event__descr event-descr">
-            <div class="event-descr__top">
-              <h3 class="event__title subtitle">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
-              <p class="text event__text">Высокий уровень вовлечения представителей целевой аудитории является четким
-                доказательством простого факта: постоянный количественный рост и сфера нашей активности представляет
-                собой
-                интересный эксперимент проверки новых принципов формирования...</p>
-            </div>
-            <div class="event-descr__bottom">
-              <a href="#" class="event__link">Подробнее</a>
+            <div class="event__descr event-descr">
+              <div class="event-descr__top">
+                <h3 class="event__title subtitle">Книжная гравюра в живом восприятии</h3>
+                <p class="text event__text">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                  продолжили
+                  его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело.
+                </p>
+              </div>
+              <div class="event-descr__bottom">
+                <a href="#" class="event__link">Подробнее</a>
+              </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li class="events__item event">
-        <img src="img/events/events-3.jpg" alt="Еврейский музей" class="event__img">
-        <div class="event__about">
-          <div class="event__spans">
-            <span class="event__place descr">Еврейский музей</span>
-            <span class="event__date descr">с 31 марта по 21 апреля</span>
-          </div>
-          <div class="event__descr event-descr">
-            <div class="event-descr__top">
-              <h3 class="event__title subtitle">Выставка «Формация 2020»</h3>
-              <p class="text event__text">Идейные соображения высшего порядка, а также современная методология
-                разработки
-                играет важную роль в формировании глубокомысленных рассуждений. Также как перспективное планирование
-                играет определяющее значение для новых принципов формирования материально-технической и кадровой
-                базы.</p>
+        </li>
+        <li class="events__item event swiper-slide">
+          <img src="img/events/events-2.jpg" alt="ММОМА" class="event__img">
+          <div class="event__about">
+            <div class="event__spans">
+              <span class="event__place descr">ММОМА</span>
+              <span class="event__date descr">24 марта 19:00</span>
             </div>
-            <div class="event-descr__bottom">
-              <a href="#" class="event__link">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="events__item event event--hidden">
-        <img src="img/events/events-3.jpg" alt="Еврейский музей" class="event__img">
-        <div class="event__about">
-          <div class="event__spans">
-            <span class="event__place descr">Еврейский музей</span>
-            <span class="event__date descr">с 31 марта по 21 апреля</span>
-          </div>
-          <div class="event__descr event-descr">
-            <div class="event-descr__top">
-              <h3 class="event__title subtitle">Выставка «Формация 2020»</h3>
-              <p class="text event__text">Идейные соображения высшего порядка, а также современная методология
-                разработки
-                играет важную роль в формировании глубокомысленных рассуждений. Также как перспективное планирование
-                играет определяющее значение для новых принципов формирования материально-технической и кадровой
-                базы.</p>
-            </div>
-            <div class="event-descr__bottom">
-              <a href="#" class="event__link">Подробнее</a>
+            <div class="event__descr event-descr">
+              <div class="event-descr__top">
+                <h3 class="event__title subtitle">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
+                <p class="text event__text">Высокий уровень вовлечения представителей целевой аудитории является четким
+                  доказательством простого факта: постоянный количественный рост и сфера нашей активности представляет
+                  собой
+                  интересный эксперимент проверки новых принципов формирования...</p>
+              </div>
+              <div class="event-descr__bottom">
+                <a href="#" class="event__link">Подробнее</a>
+              </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li class="events__item event event--hidden">
-        <img src="img/events/events-4.jpg" alt="Третьяковка на Крымском валу" class="event__img">
-        <div class="event__about">
-          <div class="event__spans">
-            <span class="event__place descr">Третьяковка на Крымском валу</span>
-            <span class="event__date descr">с 30 марта по 30 апреля</span>
-          </div>
-          <div class="event__descr event-descr">
-            <div class="event-descr__top">
-              <h3 class="event__title subtitle">XXIV Международная биеннале молодого искусства</h3>
-              <p class="text event__text">Внезапно, реплицированные с зарубежных источников, современные исследования
-                представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть
-                рассмотрены исключительно в разрезе маркетинговых и финансовых...</p>
+        </li>
+        <li class="events__item event  swiper-slide">
+          <img src="img/events/events-3.jpg" alt="Еврейский музей" class="event__img">
+          <div class="event__about">
+            <div class="event__spans">
+              <span class="event__place descr">Еврейский музей</span>
+              <span class="event__date descr">с 31 марта по 21 апреля</span>
             </div>
-            <div class="event-descr__bottom">
-              <a href="#" class="event__link">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="events__item event event--hidden">
-        <img src="img/events/events-5.jpg" alt="ММАМ" class="event__img">
-        <div class="event__about">
-          <div class="event__spans">
-            <span class="event__place descr">ММАМ</span>
-            <span class="event__date descr">с 8 апреля по 20 мая</span>
-          </div>
-          <div class="event__descr event-descr">
-            <div class="event-descr__top">
-              <h3 class="event__title subtitle">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
-              <p class="text event__text">Один из ведущих флорентийских художников Кватроченто, основатель
-                художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной
-                мастерской, где юный Микеланджело.</p>
-            </div>
-            <div class="event-descr__bottom">
-              <a href="#" class="event__link">Подробнее</a>
+            <div class="event__descr event-descr">
+              <div class="event-descr__top">
+                <h3 class="event__title subtitle">Выставка «Формация 2020»</h3>
+                <p class="text event__text">Идейные соображения высшего порядка, а также современная методология
+                  разработки
+                  играет важную роль в формировании глубокомысленных рассуждений. Также как перспективное планирование
+                  играет определяющее значение для новых принципов формирования материально-технической и кадровой
+                  базы.</p>
+              </div>
+              <div class="event-descr__bottom">
+                <a href="#" class="event__link">Подробнее</a>
+              </div>
             </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+        <li class="events__item event  swiper-slide">
+          <img src="img/events/events-3.jpg" alt="Еврейский музей" class="event__img">
+          <div class="event__about">
+            <div class="event__spans">
+              <span class="event__place descr">Еврейский музей</span>
+              <span class="event__date descr">с 31 марта по 21 апреля</span>
+            </div>
+            <div class="event__descr event-descr">
+              <div class="event-descr__top">
+                <h3 class="event__title subtitle">Выставка «Формация 2020»</h3>
+                <p class="text event__text">Идейные соображения высшего порядка, а также современная методология
+                  разработки
+                  играет важную роль в формировании глубокомысленных рассуждений. Также как перспективное планирование
+                  играет определяющее значение для новых принципов формирования материально-технической и кадровой
+                  базы.</p>
+              </div>
+              <div class="event-descr__bottom">
+                <a href="#" class="event__link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="events__item event  swiper-slide">
+          <img src="img/events/events-4.jpg" alt="Третьяковка на Крымском валу" class="event__img">
+          <div class="event__about">
+            <div class="event__spans">
+              <span class="event__place descr">Третьяковка на Крымском валу</span>
+              <span class="event__date descr">с 30 марта по 30 апреля</span>
+            </div>
+            <div class="event__descr event-descr">
+              <div class="event-descr__top">
+                <h3 class="event__title subtitle">XXIV Международная биеннале молодого искусства</h3>
+                <p class="text event__text">Внезапно, реплицированные с зарубежных источников, современные исследования
+                  представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть
+                  рассмотрены исключительно в разрезе маркетинговых и финансовых...</p>
+              </div>
+              <div class="event-descr__bottom">
+                <a href="#" class="event__link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="events__item event swiper-slide">
+          <img src="img/events/events-5.jpg" alt="ММАМ" class="event__img">
+          <div class="event__about">
+            <div class="event__spans">
+              <span class="event__place descr">ММАМ</span>
+              <span class="event__date descr">с 8 апреля по 20 мая</span>
+            </div>
+            <div class="event__descr event-descr">
+              <div class="event-descr__top">
+                <h3 class="event__title subtitle">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+                <p class="text event__text">Один из ведущих флорентийских художников Кватроченто, основатель
+                  художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной
+                  мастерской, где юный Микеланджело.</p>
+              </div>
+              <div class="event-descr__bottom">
+                <a href="#" class="event__link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="events-slider__pagination"></div>
+    </div>
     <button class="btn-reset btn events__btn">Все события</button>
   </div>
 </section>
 
-  <section class="editions">
+    <section class="editions">
   <div class="container editions__container">
     <div class="editions__left editions-left">
       <h2 class="editions-left__title title">Издания</h2>
       <div class="editions-left__categories categories">
-        <p class="categories__title">Категории</p>
+        <p class="categories__title">Категории
+          <svg>
+            <use xlink:href="img/sprite.svg#arrow"></use>
+          </svg>
+        </p>
         <ul class="categories__list">
           <li class="categories__item">
             <label data-text="Бестселлеры" class="custom-checkbox">
@@ -665,13 +780,13 @@
               <span class="custom-checkbox__text">Искусство</span>
             </label>
           </li>
-          <li class="categories__item">
+          <li class="categories__item ">
             <label data-text="Архитектура" class="custom-checkbox">
               <input type="checkbox" class="custom-checkbox__input visually-hidden">
               <span class="custom-checkbox__text">Архитектура</span>
             </label>
           </li>
-          <li class="categories__item">
+          <li class="categories__item checked">
             <label data-text="Дизайн" class="custom-checkbox">
               <input checked type="checkbox" class="custom-checkbox__input visually-hidden">
               <span class="custom-checkbox__text">Дизайн</span>
@@ -739,14 +854,14 @@
       </div>
     </div>
     <div class="editions__right editions-right">
-      <div class="editions-right__slider editions-slider">
-        <div class="swiper-pagination-block">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
+      <div class="editions-right__slider editions-slider swiper-container">
+        <div class="editions-slider__pagination-block pagination-block">
+          <div class="pagination-block__button-prev swiper-button-prev"></div>
+          <div class="pagination-block__pagination swiper-pagination"></div>
+          <div class="pagination-block__button-next swiper-button-next"></div>
         </div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
+        <div class="swiper-wrapper editions-slider__wrapper">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-1.jpg" alt="1" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
@@ -757,7 +872,7 @@
             </div>
             <button class="btn-reset btn editions-slider__btn">Заказать</button>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-2.jpg" alt="2" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
@@ -768,7 +883,7 @@
             </div>
             <button class="btn-reset btn editions-slider__btn">Заказать</button>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-3.jpg" alt="3" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
@@ -779,7 +894,7 @@
             </div>
             <button class="btn-reset btn editions-slider__btn">Заказать</button>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-4.jpg" alt="4" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
@@ -790,7 +905,7 @@
             </div>
             <button class="btn-reset btn editions-slider__btn">Заказать</button>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-5.jpg" alt="5" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
@@ -801,7 +916,7 @@
             </div>
             <button class="btn-reset btn editions-slider__btn">Заказать</button>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-6.jpg" alt="6" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
@@ -812,7 +927,7 @@
             </div>
             <button class="btn-reset btn editions-slider__btn">Заказать</button>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-7.jpg" alt="7" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
@@ -829,7 +944,7 @@
   </div>
 </section>
 
-  <section class="projects">
+    <section class="projects">
   <div class="container projects__container">
     <h2 class="projects__title title">Проекты</h2>
     <p class="projects__text text">
@@ -859,8 +974,8 @@
 
 
       <div class="projects__slider projects-slider">
-        <div class="swiper-button-prev projects-slider__prev-btn"></div>
-        <div class="swiper-button-next projects-slider__next-btn"></div>
+        <div class="pagination-block__button-prev swiper-button-prev projects-slider__prev-btn"></div>
+        <div class="pagination-block__button-next swiper-button-next projects-slider__next-btn"></div>
         <div class="swiper-wrapper projects-slider__wrapper">
           <div class="swiper-slide projects-slider__slide projects-slider__slide--1">
           </div>
@@ -886,36 +1001,38 @@
   </div>
 </section>
 
-  <section class="contacts">
+    <section class="contacts">
   <div class="container">
     <h2 class="contacts__title title">Контакты</h2>
   </div>
   <div class="contacts__container">
     <div class="container">
-      <div class="contacts__left contacts-left">
-        <p class="contacts-left__address-title subtitle">Шоурум №4</p>
-        <p class="contacts-left__address text">Леонтьевский переулок, дом 5, строение 1</p>
-        <p class="contacts-left__back-call subtitle">Заказать обратный звонок</p>
-        <form action="#" class="contacts-left__form">
-          <input type="text" name="name" placeholder="Имя*">
-          <input type="tel" name="tel" placeholder="Телефон*">
-          <button type="submit" class="btn-reset contacts-left__btn btn">Заказать</button>
-        </form>
-        <p class="subtitle contacts-left__social-title">Связаться в одик клик</p>
-        <div class="contacts-left__social">
-          <a href="https://whatsapp.com" class="contacts-left__social-btn contacts-left__social-btn--whatsapp"></a>
-          <a href="https://telegram.com" class="contacts-left__social-btn contacts-left__social-btn--telegram"></a>
+      <div class="contacts__wrapper">
+        <div class="contacts__left contacts-left">
+          <p class="contacts-left__address-title subtitle">Шоурум №4</p>
+          <p class="contacts-left__address text">Леонтьевский переулок, дом 5, строение 1</p>
+          <p class="contacts-left__back-call subtitle">Заказать обратный звонок</p>
+          <form action="#" class="contacts-left__form">
+            <input type="text" name="name" placeholder="Имя*">
+            <input type="tel" name="tel" placeholder="Телефон*">
+            <button type="submit" class="btn-reset contacts-left__btn btn">Заказать</button>
+          </form>
+          <p class="subtitle contacts-left__social-title">Связаться в одик клик</p>
+          <div class="contacts-left__social">
+            <a href="https://whatsapp.com" class="contacts-left__social-btn contacts-left__social-btn--whatsapp"></a>
+            <a href="https://telegram.com" class="contacts-left__social-btn contacts-left__social-btn--telegram"></a>
+          </div>
+        </div>
+
+        <div class="contacts__right contacts-right">
+          <div class="contacts-right__map" id="map"></div>
         </div>
       </div>
-
-    <div class="contacts__right contacts-right">
-      <div class="contacts-right__map" id="map" ></div>
     </div>
   </div>
-  </div>
-
 </section>
 
+  </main>
   <footer class="footer">
   <div class="container footer__container">
     <a href="#" class="footer__logo logo">

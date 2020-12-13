@@ -2,6 +2,20 @@
   &__container {
     padding-top: 7px;
     padding-bottom: 81px;
+
+    @include mobile-sm {
+      padding-bottom: 83px;
+    }
+
+    @include xs {
+      padding-bottom: 46px;
+    }
+  }
+
+  &__title {
+    @include xs {
+      margin-bottom: 0;
+    }
   }
 
   &__list {
@@ -10,6 +24,18 @@
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
+
+    @include mobile-sm {
+      justify-content: space-around;
+    }
+
+    @include sm {
+      justify-content: space-between;
+    }
+
+    @include xs {
+      flex-wrap: initial;
+    }
   }
 
   &__btn {
@@ -19,6 +45,10 @@
     font-weight: 600;
     font-size: 18px;
     color: var(--color-amethyst);
+
+    @include xs {
+      display: none;
+    }
   }
 }
 
@@ -35,6 +65,16 @@
   &__img {
     height: auto;
     max-width: 100%;
+    object-fit: cover;
+
+    @include mobile {
+      height: 200px;
+    }
+
+    @include xs {
+      height: auto;
+      min-height: 200px;
+    }
   }
 
   &__about {
@@ -54,6 +94,31 @@
     justify-content: space-between;
     padding: 4px 42px 48px 50px;
     height: 353px;
+
+    @include md {
+      padding-right: 29px;
+      padding-bottom: 60px;
+      padding-left: 34px;
+      height: 437px;
+
+      &:not(:nth-child(-n + 2)) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include xs {
+      padding-right: 20px;
+      padding-left: 27px;
+      height: 371px;
+    }
+  }
+
+  &__title {
+    line-height: 34px;
+
+    @include xs {
+      margin-bottom: 33px;
+    }
   }
 
   &__link {
@@ -72,11 +137,56 @@
   &--hidden {
     display: none;
   }
+
+  @include mobile-sm {
+    width: 49%;
+    max-width: 317px;
+  }
+
+  @include xs {
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    width: 100%;
+    max-width: 500px;
+    max-height: 783px;
+  }
 }
 
 .event-descr {
   &__top {
     overflow: hidden;
     margin-bottom: 20px;
+  }
+}
+
+.events-slider {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 100%;
+  max-height: 830px;
+
+  &__pagination {
+    display: none;
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: var(--color-telegrey);
+
+      &:not(:last-child) {
+        margin-right: 11px;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--color-dull-gray);
+    }
+
+    @include xs {
+      display: block;
+    }
   }
 }

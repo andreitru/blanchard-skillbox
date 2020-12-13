@@ -5,6 +5,7 @@ import './_vars';
 import './components/sliders';
 import './components/accordion';
 import './components/map';
+import './components/editions';
 // import SimpleBar from 'simplebar';
 
 import {resizeContent} from './functions/resize';

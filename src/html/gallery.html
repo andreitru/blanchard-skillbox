@@ -26,29 +26,139 @@
 
     <div class="gallery__right">
 
-      <div class="swiper-container">
-        <div class="swiper-pagination-block">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
+      <div class="gallery-slider swiper-container">
+        <div class="gallery-slider__pagination-block pagination-block">
+          <div class="pagination-block__button-prev swiper-button-prev"></div>
+          <div class="pagination-block__pagination swiper-pagination"></div>
+          <div class="pagination-block__button-next swiper-button-next"></div>
         </div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="img/gallery/gallery-1.jpg" alt="Картина 1"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-2.jpg" alt="Картина 2"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-3.jpg" alt="Картина 3"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-4.jpg" alt="Картина 4"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-5.jpg" alt="Картина 5"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-6.jpg" alt="Картина 6"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-7.jpg" alt="Картина 7"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-8.jpg" alt="Картина 8"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-9.jpg" alt="Картина 9"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-10.jpg" alt="Картина 10"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-11.jpg" alt="Картина 11"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-12.jpg" alt="Картина 12"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-13.jpg" alt="Картина 13"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-14.jpg" alt="Картина 14"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-15.jpg" alt="Картина 15"></div>
-          <div class="swiper-slide"><img src="img/gallery/gallery-16.jpg" alt="Картина 16"></div>
+        <div class="swiper-wrapper gallery-slider__wrapper">
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-1.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-1-320.jpg">
+              <img src="img/gallery/gallery-1.jpg" alt="Картина 1">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-2.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-2-320.jpg">
+              <img src="img/gallery/gallery-2.jpg" alt="Картина 2">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-3.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-3-320.jpg">
+              <img src="img/gallery/gallery-3.jpg" alt="Картина 3">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-4.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-4-320.jpg">
+              <img src="img/gallery/gallery-4.jpg" alt="Картина 4">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-5.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-5-320.jpg">
+              <img src="img/gallery/gallery-5.jpg" alt="Картина 5">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-6.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-6-320.jpg">
+              <img src="img/gallery/gallery-6.jpg" alt="Картина 6">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-7.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-7-320.jpg">
+              <img src="img/gallery/gallery-7.jpg" alt="Картина 7">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-8.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-8-320.jpg">
+              <img src="img/gallery/gallery-8.jpg" alt="Картина 8">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-9.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-9-320.jpg">
+              <img src="img/gallery/gallery-9.jpg" alt="Картина 9">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-10.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-10-320.jpg">
+              <img src="img/gallery/gallery-10.jpg" alt="Картина 10">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-11.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-11-320.jpg">
+              <img src="img/gallery/gallery-11.jpg" alt="Картина 11">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-12.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-12-320.jpg">
+              <img src="img/gallery/gallery-12.jpg" alt="Картина 12">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-13.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-13-320.jpg">
+              <img src="img/gallery/gallery-13.jpg" alt="Картина 13">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-14.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-14-320.jpg">
+              <img src="img/gallery/gallery-14.jpg" alt="Картина 14">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-15.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-15-320.jpg">
+              <img src="img/gallery/gallery-15.jpg" alt="Картина 15">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-16.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-16-320.jpg">
+              <img src="img/gallery/gallery-16.jpg" alt="Картина 16">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-17.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-17-320.jpg">
+              <img src="img/gallery/gallery-17.jpg" alt="Картина 17">
+            </picture>
+          </div>
+          <div class="gallery-slider__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 601px)" srcset="img/gallery/gallery-18.jpg">
+              <source media="(max-width: 600px)" srcset="img/gallery/gallery-18-320.jpg">
+              <img src="img/gallery/gallery-18.jpg" alt="Картина 18">
+            </picture>
+          </div>
         </div>
       </div>
     </div>

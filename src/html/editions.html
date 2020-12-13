@@ -3,7 +3,11 @@
     <div class="editions__left editions-left">
       <h2 class="editions-left__title title">Издания</h2>
       <div class="editions-left__categories categories">
-        <p class="categories__title">Категории</p>
+        <p class="categories__title">Категории
+          <svg>
+            <use xlink:href="img/sprite.svg#arrow"></use>
+          </svg>
+        </p>
         <ul class="categories__list">
           <li class="categories__item">
             <label data-text="Бестселлеры" class="custom-checkbox">
@@ -17,13 +21,13 @@
               <span class="custom-checkbox__text">Искусство</span>
             </label>
           </li>
-          <li class="categories__item">
+          <li class="categories__item ">
             <label data-text="Архитектура" class="custom-checkbox">
               <input type="checkbox" class="custom-checkbox__input visually-hidden">
               <span class="custom-checkbox__text">Архитектура</span>
             </label>
           </li>
-          <li class="categories__item">
+          <li class="categories__item checked">
             <label data-text="Дизайн" class="custom-checkbox">
               <input checked type="checkbox" class="custom-checkbox__input visually-hidden">
               <span class="custom-checkbox__text">Дизайн</span>
@@ -91,14 +95,14 @@
       </div>
     </div>
     <div class="editions__right editions-right">
-      <div class="editions-right__slider editions-slider">
-        <div class="swiper-pagination-block">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
+      <div class="editions-right__slider editions-slider swiper-container">
+        <div class="editions-slider__pagination-block pagination-block">
+          <div class="pagination-block__button-prev swiper-button-prev"></div>
+          <div class="pagination-block__pagination swiper-pagination"></div>
+          <div class="pagination-block__button-next swiper-button-next"></div>
         </div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
+        <div class="swiper-wrapper editions-slider__wrapper">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-1.jpg" alt="1" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
@@ -109,7 +113,7 @@
             </div>
             <button class="btn-reset btn editions-slider__btn">Заказать</button>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-2.jpg" alt="2" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
@@ -120,7 +124,7 @@
             </div>
             <button class="btn-reset btn editions-slider__btn">Заказать</button>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-3.jpg" alt="3" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
@@ -131,7 +135,7 @@
             </div>
             <button class="btn-reset btn editions-slider__btn">Заказать</button>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-4.jpg" alt="4" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
@@ -142,7 +146,7 @@
             </div>
             <button class="btn-reset btn editions-slider__btn">Заказать</button>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-5.jpg" alt="5" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
@@ -153,7 +157,7 @@
             </div>
             <button class="btn-reset btn editions-slider__btn">Заказать</button>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-6.jpg" alt="6" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
@@ -164,7 +168,7 @@
             </div>
             <button class="btn-reset btn editions-slider__btn">Заказать</button>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-7.jpg" alt="7" class="editions-slider__img">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
