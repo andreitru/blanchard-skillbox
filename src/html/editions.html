@@ -1,4 +1,4 @@
-<section class="editions">
+<section class="editions" id="editions">
   <div class="container editions__container">
     <div class="editions__left editions-left">
       <h2 class="editions-left__title title">Издания</h2>
@@ -11,84 +11,100 @@
         <ul class="categories__list">
           <li class="categories__item">
             <label data-text="Бестселлеры" class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox__input visually-hidden">
-              <span class="custom-checkbox__text">Бестселлеры</span>
+              <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
+              <span class="custom-checkbox__text" tabindex="0">Бестселлеры</span>
             </label>
+            <button class="btn-reset custom-checkbox__btn"></button>
           </li>
           <li class="categories__item">
             <label data-text="Искусство" class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox__input visually-hidden">
-              <span class="custom-checkbox__text">Искусство</span>
+              <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
+              <span class="custom-checkbox__text" tabindex="0">Искусство</span>
             </label>
+            <button class="btn-reset custom-checkbox__btn"></button>
           </li>
-          <li class="categories__item ">
+          <li class="categories__item">
             <label data-text="Архитектура" class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox__input visually-hidden">
-              <span class="custom-checkbox__text">Архитектура</span>
+              <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
+              <span class="custom-checkbox__text" tabindex="0">Архитектура</span>
             </label>
+            <button class="btn-reset custom-checkbox__btn"></button>
           </li>
           <li class="categories__item checked">
             <label data-text="Дизайн" class="custom-checkbox">
-              <input checked type="checkbox" class="custom-checkbox__input visually-hidden">
-              <span class="custom-checkbox__text">Дизайн</span>
+              <input checked type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
+              <span class="custom-checkbox__text" tabindex="0">Дизайн</span>
             </label>
+            <button class="btn-reset custom-checkbox__btn"></button>
           </li>
           <li class="categories__item">
             <label data-text="Мода" class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox__input visually-hidden">
-              <span class="custom-checkbox__text">Мода</span>
+              <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
+              <span class="custom-checkbox__text" tabindex="0">Мода</span>
             </label>
+            <button class="btn-reset custom-checkbox__btn"></button>
           </li>
           <li class="categories__item">
             <label data-text="Детям" class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox__input visually-hidden">
-              <span class="custom-checkbox__text">Детям</span>
+              <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
+              <span class="custom-checkbox__text" tabindex="0">Детям</span>
             </label>
+            <button class="btn-reset custom-checkbox__btn"></button>
           </li>
           <li class="categories__item">
             <label data-text="Художественная литература" class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox__input visually-hidden">
-              <span class="custom-checkbox__text">Художественная литература</span>
+              <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
+              <span class="custom-checkbox__text" tabindex="0">Художественная литература</span>
             </label>
+            <button class="btn-reset custom-checkbox__btn"></button>
           </li>
           <li class="categories__item">
             <label data-text="Публицистика" class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox__input visually-hidden">
-              <span class="custom-checkbox__text">Публицистика</span>
+              <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
+              <span class="custom-checkbox__text" tabindex="0">Публицистика</span>
             </label>
+            <button class="btn-reset custom-checkbox__btn"></button>
           </li>
           <li class="categories__item">
             <label data-text="Путеводителя" class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox__input visually-hidden">
-              <span class="custom-checkbox__text">Путеводители</span>
+              <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
+              <span class="custom-checkbox__text" tabindex="0">Путеводители</span>
             </label>
+            <button class="btn-reset custom-checkbox__btn"></button>
           </li>
           <li class="categories__item">
             <label data-text="Философия" class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox__input visually-hidden">
-              <span class="custom-checkbox__text">Философия</span>
+              <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
+              <span class="custom-checkbox__text" tabindex="0">Философия</span>
             </label>
+            <button class="btn-reset custom-checkbox__btn"></button>
           </li>
           <li class="categories__item">
             <label data-text="Учебная литература" class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox__input visually-hidden">
-              <span class="custom-checkbox__text">Учебная литература</span>
+              <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
+              <span class="custom-checkbox__text" tabindex="0">Учебная литература</span>
             </label>
+            <button class="btn-reset custom-checkbox__btn"></button>
           </li>
           <li class="categories__item">
             <label data-text="Журналы и газеты" class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox__input visually-hidden">
-              <span class="custom-checkbox__text">Журналы и газеты</span>
+              <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
+              <span class="custom-checkbox__text" tabindex="0">Журналы и газеты</span>
             </label>
+            <button class="btn-reset custom-checkbox__btn"></button>
           </li>
         </ul>
         <div class="editions-left__price price">
           <p class="price__title">Цена</p>
           <div class="price__range range">
             <span>От</span>
-            <input type="number" name="price-from" placeholder="50">
+            <label for="price-from">
+              <input type="number" name="price-from" id="price-from" placeholder="50">
+            </label>
             <span>до</span>
-            <input type="number" name="price-to" placeholder="25 000">
+            <label for="price-to">
+              <input type="number" name="price-to" id="price-to" placeholder="25 000">
+            </label>
             <span>рублей</span>
           </div>
         </div>
@@ -111,7 +127,7 @@
               </div>
               <span class="editions-slider__price">620 руб</span>
             </div>
-            <button class="btn-reset btn editions-slider__btn">Заказать</button>
+            <button class="btn-reset btn editions-slider__btn"><span>Заказать</span></button>
           </div>
           <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-2.jpg" alt="2" class="editions-slider__img">
@@ -122,7 +138,7 @@
               </div>
               <span class="editions-slider__price">2 450 руб</span>
             </div>
-            <button class="btn-reset btn editions-slider__btn">Заказать</button>
+            <button class="btn-reset btn editions-slider__btn"><span>Заказать</span></button>
           </div>
           <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-3.jpg" alt="3" class="editions-slider__img">
@@ -133,7 +149,7 @@
               </div>
               <span class="editions-slider__price">2 200 руб</span>
             </div>
-            <button class="btn-reset btn editions-slider__btn">Заказать</button>
+            <button class="btn-reset btn editions-slider__btn"><span>Заказать</span></button>
           </div>
           <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-4.jpg" alt="4" class="editions-slider__img">
@@ -144,7 +160,7 @@
               </div>
               <span class="editions-slider__price">1 100 руб</span>
             </div>
-            <button class="btn-reset btn editions-slider__btn">Заказать</button>
+            <button class="btn-reset btn editions-slider__btn"><span>Заказать</span></button>
           </div>
           <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-5.jpg" alt="5" class="editions-slider__img">
@@ -155,7 +171,7 @@
               </div>
               <span class="editions-slider__price">1 450 руб</span>
             </div>
-            <button class="btn-reset btn editions-slider__btn">Заказать</button>
+            <button class="btn-reset btn editions-slider__btn"><span>Заказать</span></button>
           </div>
           <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-6.jpg" alt="6" class="editions-slider__img">
@@ -166,7 +182,7 @@
               </div>
               <span class="editions-slider__price">3 200 руб</span>
             </div>
-            <button class="btn-reset btn editions-slider__btn">Заказать</button>
+            <button class="btn-reset btn editions-slider__btn"><span>Заказать</span></button>
           </div>
           <div class="swiper-slide editions-slider__slide">
             <img src="img/editions/editions-7.jpg" alt="7" class="editions-slider__img">
@@ -177,7 +193,7 @@
               </div>
               <span class="editions-slider__price">2 200 руб</span>
             </div>
-            <button class="btn-reset btn editions-slider__btn">Заказать</button>
+            <button class="btn-reset btn editions-slider__btn"><span>Заказать</span></button>
           </div>
         </div>
       </div>

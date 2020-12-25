@@ -21,6 +21,7 @@ const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
 const revdel = require('gulp-rev-delete-original');
 const htmlmin = require('gulp-htmlmin');
+const closureCompiler = require('gulp-closure-compiler');
 
 // DEV
 //svg sprite
@@ -42,7 +43,7 @@ const resources = () => {
 }
 
 const imgToApp = () => {
-	return src(['./src/img/**/**.jpg', './src/img/**/**.png', './src/img/**/**.jpeg', './src/img/**/**.svg'])
+	return src(['./src/img/**/**.jpg', './src/img/**/**.png', './src/img/**/**.jpeg', './src/img/**/**.svg', './src/img/**/**.ico'])
     .pipe(dest('./app/img'))
 }
 
@@ -224,7 +225,7 @@ exports.default = series(clean, parallel(htmlInclude, scripts, fonts, resources,
 const tinypng = () => {
   return src(['./src/img/**/**.jpg', './src/img/**/**.png', './src/img/**/**.jpeg'])
     .pipe(tiny({
-      key: 'HkdjDW01hVL5Db6HXSYlnHMk9HCvQfDT',
+      key: 'PnVXKjjzzXv0NSG1zfNQ2Y3JN4lgZL3D',
       sigFile: './app/img/.tinypng-sigs',
       parallel: true,
       parallelMax: 50,
@@ -308,9 +309,18 @@ const htmlMinify = () => {
 		.pipe(dest('app'));
 }
 
+const compiler = () => {
+  return src('src/*.js')
+    .pipe(closureCompiler({
+      compilerPath: 'bower_components/closure-compiler/lib/vendor/compiler.jar',
+      fileName: 'main.js'
+    }))
+    .pipe(dest('app'));
+}
+
 exports.cache = series(cache, rewrite);
 
-exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, svgSprites), fontsStyle, stylesBuild, htmlMinify, tinypng);
+exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, svgSprites), fontsStyle, stylesBuild, htmlMinify, tinypng, compiler);
 
 
 // deploy

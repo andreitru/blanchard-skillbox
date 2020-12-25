@@ -8,14 +8,15 @@
         <img src="img/logo.png" alt="Логотип Blanchard">
       </a>
       <div class="search search--mobile">
-        <label for="search">
+        <label for="search-mobile">
           <svg>
             <use xlink:href="img/sprite.svg#search"></use>
           </svg>
-          <input type="text" class="search__input input" placeholder="Поиск по сайту">
+            <input type="text" class="search__input input" id="search-mobile" placeholder="Поиск по сайту">
         </label>
       </div>
       <nav class="nav header-top__nav">
+        <button class="btn-reset nav__close"></button>
         <ul class="nav__list">
           <li class="nav__item"><a href="#about" class="nav__link link">О нас</a></li>
           <li class="nav__item"><a href="#gallery" class="nav__link link">Галерея</a></li>
@@ -25,15 +26,21 @@
           <li class="nav__item"><a href="#projects" class="nav__link link">Проекты</a></li>
           <li class="nav__item"><a href="#contacts" class="nav__link link">Контакты</a></li>
         </ul>
-        <button class="btn-reset nav__btn">Войти</button>
+        <button class="btn-reset nav__btn">
+          <svg>
+            <use xlink:href="img/sprite.svg#login"></use>
+          </svg>
+          Войти
+        </button>
       </nav>
     </div>
   </div>
   <div class="header__bottom">
     <div class="container header-bottom__container">
-      <div class="header-bottom__select ">
-        <div class="select__realism header-select">
-          <div class="header-select__top">Реализм
+      <div class="header-bottom__select">
+        <div class="header-select__realism header-select">
+          <div class="header-select__top" tabindex="0" role="combobox" aria-label="реализм" aria-expanded="false">
+            Реализм
             <svg>
               <use xlink:href="img/sprite.svg#arrow"></use>
             </svg>
@@ -51,7 +58,8 @@
         </div>
 
         <div class="header-select__impressionism header-select">
-          <div class="header-select__top">Импрессионизм
+          <div class="header-select__top" role="combobox" tabindex="0" aria-label="импрессионизм" aria-expanded="false">
+            Импрессионизм
             <svg>
               <use xlink:href="img/sprite.svg#arrow"></use>
             </svg>
@@ -69,7 +77,8 @@
         </div>
 
         <div class="header-select__post-impressionism header-select">
-          <div class="header-select__top">Постимпрессионизм
+          <div class="header-select__top" role="combobox" tabindex="0" aria-label="постимпрессионизм"
+               aria-expanded="false">Постимпрессионизм
             <svg>
               <use xlink:href="img/sprite.svg#arrow"></use>
             </svg>
@@ -87,7 +96,8 @@
         </div>
 
         <div class="header-select__vanguard header-select">
-          <div class="header-select__top">Авангард
+          <div class="header-select__top" role="combobox" tabindex="0" aria-label="авангард" aria-expanded="false">
+            Авангард
             <svg>
               <use xlink:href="img/sprite.svg#arrow"></use>
             </svg>
@@ -105,7 +115,8 @@
         </div>
 
         <div class="header-select__futurism header-select">
-          <div class="header-select__top">Футуризм
+          <div class="header-select__top" role="combobox" tabindex="0" aria-label="футуризм" aria-expanded="false">
+            Футуризм
             <svg>
               <use xlink:href="img/sprite.svg#arrow"></use>
             </svg>
@@ -127,7 +138,7 @@
           <svg>
             <use xlink:href="img/sprite.svg#search"></use>
           </svg>
-          <input type="text" id="search" class="search__input input" placeholder="Поиск по сайту">
+          <input type="search" id="search" class="search__input input" placeholder="Поиск по сайту">
         </label>
       </div>
     </div>

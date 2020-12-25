@@ -1,10 +1,16 @@
 import Swiper from "../vendor/swiper-bundle.min";
+import vars from "../_vars";
 
 var gallerySlider = new Swiper('.gallery-slider', {
   slidesPerView: 1,
   slidesPerGroup: 1,
   slidesPerColumn: 1,
   spaceBetween: 10,
+  setWrapperSize: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
   pagination: {
     el: '.pagination-block__pagination',
     type: 'fraction',
@@ -15,6 +21,7 @@ var gallerySlider = new Swiper('.gallery-slider', {
   },
   breakpoints: {
     1501: {
+      setWrapperSize: true,
       slidesPerView: 3,
       slidesPerColumn: 2,
       spaceBetween: 50,
@@ -32,7 +39,7 @@ var gallerySlider = new Swiper('.gallery-slider', {
       spaceBetween: 34,
       slidesPerGroup: 2,
     },
-    500: {
+    400: {
       slidesPerView: 2,
       slidesPerColumn: 1,
       spaceBetween: 20,
@@ -75,7 +82,6 @@ var editionsSlider = new Swiper('.editions-slider', {
 
 var projectsSlider = new Swiper('.projects-slider', {
   slidesPerView: 1,
-  // spaceBetween: 50,
   slidesPerGroup: 1,
   navigation: {
     nextEl: '.pagination-block__button-next',
@@ -105,26 +111,32 @@ var projectsSlider = new Swiper('.projects-slider', {
   },
 })
 
-if (document.body.clientWidth < 577) {
-  var eventsSlider = new Swiper('.events-slider', {
-    slidesPerView: 1,
-    setWrapperSize: true,
-    pagination: {
-      el: '.events-slider__pagination',
-      type: 'bullets',
-      clickable: true
+var eventsSlider = new Swiper('.events-slider', {
+  init: false,
+  slidesPerView: 1,
+  setWrapperSize: true,
+  pagination: {
+    el: '.events-slider__pagination',
+    type: 'bullets',
+    clickable: true
+  }
+})
+
+// включение и выключение слайдеров в блоках "События" и "Издания" в зависимости от ширины экрана
+export function sliders(width) {
+  if (width < 576) {
+    if (editionsSlider.initialized === true) {
+      editionsSlider.destroy(false);
     }
-  })
-}
-
-if (document.body.clientWidth > 576) {
-  editionsSlider.init();
-}
-
-if (document.body.clientWidth <= 576) {
-  try {
-    editionsSlider.destroy();
-  } catch (error) {
-    console.log(error.message)
+    vars.$events.forEach(item => {
+      item.classList.remove('event--hidden');
+    })
+    eventsSlider.init();
+  } else if (width >= 576) {
+    if (eventsSlider.initialized === true) {
+      eventsSlider.destroy(false);
+    }
+    editionsSlider.init();
   }
 }
+// end

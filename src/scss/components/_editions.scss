@@ -1,5 +1,5 @@
 .editions {
-  background: url('../img/editions/background.jpg') no-repeat center;
+  background: url("../img/editions/background.jpg") no-repeat center;
   background-size: cover;
 
   &__container {
@@ -84,6 +84,7 @@
 
     svg {
       display: none;
+      margin-right: 5px;
       width: 10px;
       height: 10px;
       fill: currentColor;
@@ -92,6 +93,12 @@
 
       @include xs {
         display: block;
+      }
+    }
+
+    &--showed {
+      svg {
+        transform: rotate(-90deg);
       }
     }
 
@@ -127,37 +134,10 @@
   &__item {
     position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 50%;
-      display: none;
-      border-top: 1px solid var(--color-violet);
-      width: 16px;
-      transform: rotate(-45deg);
-
-      @include xs {
-        display: block;
-      }
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 50%;
-      display: none;
-      border-top: 1px solid var(--color-violet);
-      width: 16px;
-      transform: rotate(45deg);
-
-      @include xs {
-        display: block;
-      }
-    }
-
     .custom-checkbox {
+      cursor: pointer;
+      user-select: none;
+
       &__input {
         &:checked + .custom-checkbox__text {
           color: var(--color-violet);
@@ -173,6 +153,8 @@
         padding-left: 25px;
         font-size: 16px;
         line-height: 32px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         color: var(--color-white);
 
         &::before {
@@ -201,6 +183,52 @@
         &:not(:last-child) {
           margin-bottom: 20px;
         }
+
+        &:focus {
+          @include focus;
+        }
+
+        &:hover {
+          @include hover;
+        }
+
+        &:active {
+          @include active;
+        }
+      }
+
+      &__btn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        display: none;
+        width: 16px;
+        height: 16px;
+        transform: translate(-50%, -50%);
+
+        &::before {
+          content: "";
+          display: none;
+          border-top: 1px solid var(--color-violet);
+          width: 16px;
+          transform: rotate(-45deg);
+
+          @include xs {
+            display: block;
+          }
+        }
+
+        &::after {
+          content: "";
+          display: none;
+          border-top: 1px solid var(--color-violet);
+          width: 16px;
+          transform: rotate(45deg) translateY(-100%);
+
+          @include xs {
+            display: block;
+          }
+        }
       }
     }
 
@@ -209,11 +237,24 @@
     }
 
     @include xs {
+      display: none;
       border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       padding-bottom: 5px;
 
-      &:not(.checked) {
-        display: none;
+      &.checked,
+      &--showed {
+        display: block;
+        opacity: 0;
+        transition: 0.5s;
+        animation: show 0.5s 1;
+        animation-delay: 0.1s;
+        animation-fill-mode: forwards;
+      }
+
+      &.checked {
+        .custom-checkbox__btn {
+          display: block;
+        }
       }
     }
   }
@@ -309,10 +350,21 @@
       color: var(--color-white);
     }
 
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+      -moz-appearance: textfield;
+    }
+
     @include xs {
       width: 70px;
     }
   }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .editions-slider {

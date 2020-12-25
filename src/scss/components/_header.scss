@@ -25,8 +25,20 @@
     justify-content: space-between;
     height: 100px;
 
+    @include md {
+      justify-content: flex-start;
+    }
+
     @include xs {
       height: 45px;
+    }
+  }
+
+  &__logo {
+    @include md {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }
@@ -63,15 +75,29 @@
     @include lg {
       margin-right: 70px;
     }
+
+    @include md {
+      flex-direction: column;
+      align-items: flex-start;
+      overflow: scroll;
+      width: 100%;
+    }
   }
 
   &__item {
     &:not(:last-child) {
-      margin-right: 62px;
+      margin-right: 61px;
 
       @include lg {
         margin-right: 30px;
       }
+    }
+
+    @include md {
+      display: inline-block;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--color-white);
+      width: 100%;
     }
   }
 
@@ -80,19 +106,102 @@
     font-size: 18px;
     line-height: 25px;
     color: var(--color-white);
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    @include md {
+      font-size: 22px;
+    }
   }
 
   &__btn {
     padding-right: 0;
-    padding-left: 20px;
     font-weight: 400;
     font-size: 18px;
     color: var(--color-white);
-    background: url('../img/login.svg') no-repeat left center;
+
+    svg {
+      width: 13px;
+      height: 13px;
+      fill: currentColor;
+    }
+
+    &:focus {
+      @include focus;
+    }
+
+    &:hover {
+      @include hover;
+    }
+
+    &:active {
+      @include active;
+    }
+
+    @include md {
+      margin-bottom: 50px;
+      font-size: 22px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__close {
+    position: relative;
+    display: none;
+    align-self: flex-end;
+    border-left: 2px solid var(--color-white);
+    padding: 20px 10px 0;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-135deg);
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 50%;
+      top: 50%;
+      display: block;
+      border-right: 2px solid var(--color-white);
+      width: 30px;
+      height: 30px;
+      transform: rotate(90deg) translateX(-95%);
+    }
+
+    &:hover {
+      @include exclude-xs {
+        border-color: var(--color-violet);
+
+        &::after {
+          border-color: var(--color-violet);
+        }
+      }
+    }
   }
 
   @include md {
-    display: none;
+    position: fixed;
+    left: -150vw;
+    top: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-right: 30px;
+    padding-left: 40px;
+    width: 80%;
+    height: 100vh;
+    background-color: var(--color-black);
+    transition: left 0.3s;
+
+    &--opened {
+      left: 0;
+      transition: left 0.3s;
+    }
   }
 }
 
@@ -144,32 +253,79 @@
       object-fit: cover;
       transform: rotate(90deg);
     }
+
+    &:focus {
+      @include focus;
+    }
+
+    &:hover {
+      @include hover;
+    }
+
+    &:active {
+      @include active;
+    }
   }
 
   &__dropdown {
     position: absolute;
     left: -10px;
-    top: 10px;
+    top: 15px;
     z-index: 20;
     padding: 10px;
-    width: 100%;
-    height: 50px;
+    width: 220px;
   }
 
   &__list {
     display: none;
     width: 100%;
-    height: 50px;
+    height: 220px;
   }
 
   &__item {
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
     font-weight: 600;
     font-size: 14px;
     line-height: 19px;
     color: var(--color-white);
+    background: url('../img/header/list-background.jpg') no-repeat center;
+    cursor: pointer;
 
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      @include exclude-xs {
+        outline: 2px solid var(--color-amethyst);
+        outline-offset: -2px;
+      }
+    }
+
+    &:active {
+      @include xs {
+        outline: 2px solid #d1a9f0;
+        outline-offset: -2px;
+        background-color: rgba(194, 131, 243, 0.4);
+        background-blend-mode: multiply;
+      }
+    }
+  }
+
+  &--showed .header-select__list {
+    display: block;
+    opacity: 0;
+    transition: 0.5s;
+    animation: show 0.5s 1;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+
+  &--showed .header-select__top {
+    svg {
+      transform: rotate(-90deg);
     }
   }
 }
@@ -201,6 +357,20 @@
         color: var(--color-white);
         opacity: 0.85;
       }
+
+      @include md {
+        max-width: 140px;
+      }
+
+      @include sm {
+        max-width: 110px;
+        font-size: 14px;
+      }
+
+      @include xs {
+        max-width: 80px;
+        font-size: 10px;
+      }
     }
 
     &:focus-within {
@@ -208,10 +378,12 @@
     }
 
     &:hover {
-      color: var(--color-violet);
+      @include exclude-xs {
+        color: var(--color-violet);
 
-      input {
-        border-color: currentColor;
+        input {
+          border-color: currentColor;
+        }
       }
     }
   }
@@ -221,7 +393,10 @@
   }
 
   &--mobile {
+    position: absolute;
+    right: 50px;
     display: none;
+    transition: right 0.3s;
 
     label {
       svg {
@@ -237,11 +412,42 @@
     }
 
     input {
+      position: absolute;
+      left: 35px;
       display: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+
+      @include xs {
+        left: 20px;
+      }
     }
 
     @include md {
       display: block;
+    }
+
+    @include xs {
+      right: 15px;
+    }
+  }
+
+  &--showed {
+    right: 170px;
+    transition: right 0.3s;
+
+    input {
+      display: block;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    @include sm {
+      right: 130px;
+    }
+
+    @include xs {
+      right: 90px;
     }
   }
 }
@@ -304,23 +510,15 @@
   }
 }
 
-/*
-.simplebar-content-wrapper {
-  overflow: scroll;
-}
-
-.simplebar-track .simplebar-vertical {
-  width: 3px;
+.simplebar-track.simplebar-vertical {
+  width: 2px;
   background-color: var(--color-signal-black);
 }
 
-.simplebar-scrollbar::before {
-  //left: 0;
-  //right: 0;
-  border-radius: 0;
-  width: 3px;
-  height: 100%;
-  background-color: var(--color-black);
-  //opacity: 1;
+.simplebar-mask {
+  margin-right: 20px;
 }
-*/
+
+.simplebar-scrollbar {
+  background-color: var(--color-amethyst);
+}

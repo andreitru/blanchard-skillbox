@@ -5,15 +5,12 @@ import './_vars';
 import './components/sliders';
 import './components/accordion';
 import './components/map';
-import './components/editions';
-// import SimpleBar from 'simplebar';
-
-import {resizeContent} from './functions/resize';
-import {scrollTo} from './functions/smooth-scroll';
-import {disableScroll, enableScroll} from './functions/stop-scroll';
-
-//disableScroll(fix) // fix -> class of element with position: fixed
-
-// new SimpleBar(document.getElementById('scrollbar'), {
-//   autoHide: false,
-// });
+import './functions/onresize';
+import './components/simplebar';
+import './components/dropdowns';
+import './components/burger';
+import './components/searchMobile';
+import './components/catalog';
+import './components/events';
+import './components/checkboxes';
+import './components/contactsForm';

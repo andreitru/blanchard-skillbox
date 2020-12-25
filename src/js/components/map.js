@@ -3,12 +3,11 @@ import '../vendor/yandex-map';
 ymaps.ready(init);
 
 function init() {
-
   let center = [55.764010351657944, 37.62781575946036];
   if (document.body.clientWidth < 1200) {
-    center = [55.764010351657944, 37.61]
+    center = [55.764010351657944, 37.61];
   } else if (document.body.clientWidth < 768) {
-    center = [55.764010351657944, 37.59]
+    center = [55.764010351657944, 37.59];
   }
 
   var myMap = new ymaps.Map("map", {
@@ -21,7 +20,6 @@ function init() {
     iconLayout: 'default#image',
     iconImageHref: '../../img/geomark.svg',
     iconImageSize: [20, 20],
-
   })
 
   let isTablet = document.body.clientWidth > 1024;

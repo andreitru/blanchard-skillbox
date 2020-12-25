@@ -1,0 +1,73 @@
+@mixin hover {
+  text-decoration: none;
+
+  @include exclude-xs {
+    text-decoration: none;
+    color: var(--color-violet);
+    transition: color 0.3s;
+  }
+}
+
+@mixin focus {
+  outline: 2px solid var(--color-krayola);
+  text-decoration: none;
+}
+
+@mixin active {
+  @include xs {
+    color: var(--color-krayola);
+  }
+}
+
+@mixin sliderBtnHover {
+  @include exclude-xs {
+    border-color: var(--color-amethyst);
+    background-color: var(--color-amethyst);
+    transition: all 0.3s;
+
+    &::after {
+      color: var(--color-white);
+      transition: color 0.3s;
+    }
+  }
+}
+
+@mixin sliderBtnFocus {
+  border-color: var(--color-krayola);
+}
+
+@mixin sliderBtnActive {
+  @include xs {
+    border-color: var(--color-purple);
+    background-color: var(--color-krayola);
+  }
+}
+
+@mixin hoverBtn {
+  @include exclude-xs {
+    background-color: var(--color-amethyst);
+    transition: background-color 0.3s;
+
+    span {
+      color: var(--color-white);
+      transition: color 0.3s;
+    }
+  }
+}
+
+@mixin focusBtn {
+  span {
+    @include focus;
+  }
+}
+
+@mixin activeBtn {
+  @include xs {
+    border-color: var(--color-purple);
+    background-color: var(--color-krayola);
+
+    span {
+      color: var(--color-white);
+    }
+  }
+}
