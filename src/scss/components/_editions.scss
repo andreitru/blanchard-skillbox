@@ -156,6 +156,7 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         color: var(--color-white);
+        transition: color 0.3s;
 
         &::before {
           content: "";

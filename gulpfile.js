@@ -140,14 +140,15 @@ const styles = () => {
     .pipe(sass({
       outputStyle: 'expanded'
     }).on("error", notify.onError()))
-    .pipe(rename({
-      suffix: '.min'
-    }))
+    // .pipe(rename({
+    //   suffix: '.min'
+    // }))
     .pipe(autoprefixer({
       cascade: false,
     }))
     .pipe(cleanCSS({
-      level: 2
+      level: 2,
+      format: 'beautify'
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./app/css/'))
@@ -239,14 +240,15 @@ const stylesBuild = () => {
     .pipe(sass({
       outputStyle: 'expanded'
     }).on("error", notify.onError()))
-    .pipe(rename({
-      suffix: '.min'
-    }))
+    // .pipe(rename({
+    //   suffix: '.min'
+    // }))
     .pipe(autoprefixer({
       cascade: false,
     }))
     .pipe(cleanCSS({
-      level: 2
+      level: 2,
+      format: 'beautify'
     }))
     .pipe(dest('./app/css/'))
 }
@@ -301,13 +303,13 @@ const rewrite = () => {
     .pipe(dest('app'));
 }
 
-const htmlMinify = () => {
-	return src('app/**/*.html')
-		.pipe(htmlmin({
-			collapseWhitespace: true
-		}))
-		.pipe(dest('app'));
-}
+// const htmlMinify = () => {
+// 	return src('app/**/*.html')
+// 		.pipe(htmlmin({
+// 			collapseWhitespace: true
+// 		}))
+// 		.pipe(dest('app'));
+// }
 
 const compiler = () => {
   return src('src/*.js')
@@ -320,7 +322,7 @@ const compiler = () => {
 
 exports.cache = series(cache, rewrite);
 
-exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, svgSprites), fontsStyle, stylesBuild, htmlMinify, tinypng, compiler);
+exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, svgSprites), fontsStyle, stylesBuild, tinypng, compiler);
 
 
 // deploy

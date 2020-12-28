@@ -4,7 +4,6 @@
   @include exclude-xs {
     text-decoration: none;
     color: var(--color-violet);
-    transition: color 0.3s;
   }
 }
 
@@ -23,11 +22,9 @@
   @include exclude-xs {
     border-color: var(--color-amethyst);
     background-color: var(--color-amethyst);
-    transition: all 0.3s;
 
     &::after {
       color: var(--color-white);
-      transition: color 0.3s;
     }
   }
 }
@@ -46,11 +43,9 @@
 @mixin hoverBtn {
   @include exclude-xs {
     background-color: var(--color-amethyst);
-    transition: background-color 0.3s;
 
     span {
       color: var(--color-white);
-      transition: color 0.3s;
     }
   }
 }

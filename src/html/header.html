@@ -4,14 +4,16 @@
       <button class="burger btn-reset header__burger">
         <span class="burger__line"></span>
       </button>
-      <a href="#" class="logo header-top__logo">
+      <a href="#" class="header-top__logo">
         <img src="img/logo.png" alt="Логотип Blanchard">
       </a>
       <div class="search search--mobile">
         <label for="search-mobile">
-          <svg>
-            <use xlink:href="img/sprite.svg#search"></use>
-          </svg>
+          <button class="btn-reset search__btn search__btn--mobile" type="submit">
+            <svg>
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
             <input type="text" class="search__input input" id="search-mobile" placeholder="Поиск по сайту">
         </label>
       </div>
@@ -135,9 +137,11 @@
       </div>
       <div class="header-bottom__search search">
         <label for="search">
-          <svg>
-            <use xlink:href="img/sprite.svg#search"></use>
-          </svg>
+          <button class="btn-reset search__btn" type="submit">
+            <svg>
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
           <input type="search" id="search" class="search__input input" placeholder="Поиск по сайту">
         </label>
       </div>

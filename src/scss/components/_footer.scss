@@ -16,9 +16,7 @@
 
   &__logo {
     img {
-      @include md {
-        width: 173px;
-      }
+      width: 173px;
 
       @include xs {
         width: 97px;
