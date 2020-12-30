@@ -29,7 +29,7 @@
               <use xlink:href="img/sprite.svg#search"></use>
             </svg>
           </button>
-            <input type="text" class="search__input input" id="search-mobile" placeholder="Поиск по сайту">
+          <input type="text" class="search__input input" id="search-mobile" placeholder="Поиск по сайту">
         </label>
       </div>
       <nav class="nav header-top__nav">
@@ -62,8 +62,30 @@
               <use xlink:href="img/sprite.svg#arrow"></use>
             </svg>
           </div>
-          <div class="header-select__dropdown" id="scrollbar">
+          <div class="header-select__dropdown">
+            <div class="header-select__realism header-select header-select__subselect"
+                 data-subselect="Передвижничество">
+              <div class="header-select__dropdown">
+                <ul class="header-select__list">
+                  <li class="header-select__item">Репин</li>
+                  <li class="header-select__item">Суриков</li>
+                  <li class="header-select__item">Мясоедов</li>
+                  <li class="header-select__item">Дубовской</li>
+                  <li class="header-select__item">Саврасов</li>
+                  <li class="header-select__item">Шишкин</li>
+                </ul>
+              </div>
+            </div>
             <ul class="header-select__list">
+              <li class="header-select__item header-select__item--subselect">
+                <div class="header-select__top" tabindex="0" role="combobox" aria-label="передвижничество"
+                     aria-expanded="false">
+                  Передвижничество
+                  <svg>
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg>
+                </div>
+              </li>
               <li class="header-select__item">Авилов</li>
               <li class="header-select__item">Баженов</li>
               <li class="header-select__item">Вайреда</li>
@@ -73,7 +95,6 @@
             </ul>
           </div>
         </div>
-
         <div class="header-select__impressionism header-select">
           <div class="header-select__top" role="combobox" tabindex="0" aria-label="импрессионизм" aria-expanded="false">
             Импрессионизм
@@ -152,7 +173,7 @@
       </div>
       <div class="header-bottom__search search">
         <label for="search">
-          <button class="btn-reset search__btn" type="submit">
+          <button class="btn-reset search__btn" type="submit" aria-label="поиск по сайту">
             <svg>
               <use xlink:href="img/sprite.svg#search"></use>
             </svg>
@@ -170,7 +191,7 @@
   </div>
   <div class="container hero__container">
     <h1 class="visually-hidden">Blanchard - художественная галерея</h1>
-    <p class="hero__title">Прикоснитесь к прекрасному</p>
+    <h2 class="hero__title">Прикоснитесь к прекрасному</h2>
     <p class="hero__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт
       предпосылки для новых предложений.</p>
     <a href="#contacts" class=" btn hero__btn" role="button">Подписаться на рассылку</a>
@@ -1359,7 +1380,7 @@
             </div>
           </div>
         </li>
-        <li class="events__item event  swiper-slide event--hidden">
+        <li class="events__item event swiper-slide">
           <img src="img/events/events-3.jpg" alt="Еврейский музей" class="event__img">
           <div class="event__about">
             <div class="event__spans">
@@ -1381,7 +1402,7 @@
             </div>
           </div>
         </li>
-        <li class="events__item event  swiper-slide event--hidden">
+        <li class="events__item event swiper-slide">
           <img src="img/events/events-4.jpg" alt="Третьяковка на Крымском валу" class="event__img">
           <div class="event__about">
             <div class="event__spans">
@@ -1401,7 +1422,7 @@
             </div>
           </div>
         </li>
-        <li class="events__item event swiper-slide event--hidden">
+        <li class="events__item event swiper-slide">
           <img src="img/events/events-5.jpg" alt="ММАМ" class="event__img">
           <div class="event__about">
             <div class="event__spans">
@@ -1527,12 +1548,12 @@
         <div class="editions-left__price price">
           <p class="price__title">Цена</p>
           <div class="price__range range">
-            <span>От</span>
             <label for="price-from">
+              <span>От</span>
               <input type="number" name="price-from" id="price-from" placeholder="50">
             </label>
-            <span>до</span>
             <label for="price-to">
+              <span>до</span>
               <input type="number" name="price-to" id="price-to" placeholder="25 000">
             </label>
             <span>рублей</span>
@@ -1638,27 +1659,30 @@
       Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
       фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
       уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде
-      всего, постоянное информационно-пропагандистское <span class="projects__tooltip"
-                                                             data-tooltip="Пример современных тенденций - современная методология разработки">
-      <svg>
-        <use xlink:href="img/sprite.svg#i"></use>
-      </svg>
-    </span> обеспечение нашей деятельности однозначно фиксирует необходимость
-      экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут
-      быть рассмотрены <span class="projects__tooltip"
-                             data-tooltip="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"><svg>
-        <use xlink:href="img/sprite.svg#i"></use>
-      </svg></span> исключительно в разрезе маркетинговых и финансовых <span class="projects__tooltip"
-                                                                             data-tooltip="В стремлении повысить качество "><svg>
-        <use xlink:href="img/sprite.svg#i"></use>
-      </svg></span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных
+      всего, постоянное информационно-пропагандистское
+        <span tabindex="0" class="projects__tooltip"
+              data-tooltip="Пример современных тенденций - современная методология разработки">
+          <svg><use xlink:href="img/sprite.svg#i"></use></svg>
+        </span>
+      обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений.
+      И нет сомнений, что действия представителей оппозиции могут быть рассмотрены
+        <span tabindex="0" class="projects__tooltip"
+              data-tooltip="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции">
+          <svg><use xlink:href="img/sprite.svg#i"></use></svg>
+        </span>
+      исключительно в разрезе маркетинговых и финансовых
+        <span tabindex="0" class="projects__tooltip"
+              data-tooltip="В стремлении повысить качество">
+          <svg><use xlink:href="img/sprite.svg#i"></use></svg>
+        </span>
+      предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных
       резервов призывают нас к новым свершениям, которые, в свою
-      очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее:
-      <a href="https://blanchard-art.ru/projects/about" target="_blank" class="projects__link link">blanchard-art.ru/projects/about</a>
+      очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости.
+      Подробнее: <a href="https://blanchard-art.ru/projects/about" target="_blank"
+                   class="projects__link link">blanchard-art.ru/projects/about</a>
     </p>
     <h3 class="projects__subtitle subtitle">Партнёры проектов:</h3>
     <div class="projects__bottom">
-
       <div class="projects__slider projects-slider">
         <div class="pagination-block__button-prev swiper-button-prev projects-slider__prev-btn"></div>
         <div class="pagination-block__button-next swiper-button-next projects-slider__next-btn"></div>

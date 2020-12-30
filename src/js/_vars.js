@@ -6,6 +6,7 @@ export default {
   $accordionList: document.querySelectorAll('.accordion__list'),
   $editionsList: document.querySelectorAll('.categories__list'),
   $headerSelect: document.querySelectorAll('.header-select'),
+  $headerSubSelect: document.querySelectorAll('.header-select__subselect'),
   $headerSelectList: document.querySelectorAll('.header-select__list'),
   $headerSelectTitles: document.querySelectorAll('.header-select__top'),
   $gallerySelect: document.querySelector('.gallery-select'),

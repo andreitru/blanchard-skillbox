@@ -398,6 +398,7 @@
 
   &__link {
     color: var(--color-signal-black);
+    transition: color 0.3s;
 
     &:hover {
       @include exclude-xs {

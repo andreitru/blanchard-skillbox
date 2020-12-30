@@ -1,6 +1,5 @@
 import vars from "../_vars";
 import {sliders} from "../components/sliders";
-import changeShowedEvents from "../components/events";
 
 // изменение высоты списка в аккордеоне (блок "Каталог") в зависимости от ширины экрана
 function changeListHeight(width) {
@@ -44,7 +43,6 @@ export function onResize() {
   changeListHeight(width);
   changeCategoryHeight(width);
   sliders(width);
-  changeShowedEvents(width);
 }
 
 window.onload = onResize;

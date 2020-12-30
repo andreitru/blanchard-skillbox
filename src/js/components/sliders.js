@@ -129,7 +129,7 @@ export function sliders(width) {
       editionsSlider.destroy(false);
     }
     vars.$events.forEach(item => {
-      item.classList.remove('event--hidden');
+      item.style.display = 'block';
     })
     eventsSlider.init();
   } else if (width >= 576) {

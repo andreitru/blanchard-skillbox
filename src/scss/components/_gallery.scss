@@ -94,6 +94,13 @@
 
   &__link {
     color: var(--color-violet);
+    transition: color 0.3s;
+
+    &:hover {
+      @include exclude-xs {
+        color: var(--color-amethyst);
+      }
+    }
   }
 
   @include mobile {

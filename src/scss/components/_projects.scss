@@ -4,7 +4,7 @@
     padding-bottom: 80px;
 
     @include mobile {
-      padding-bottom: 70px;
+      padding-bottom: 67px;
     }
 
     @include mobile-sm {
@@ -78,7 +78,8 @@
         transition: fill 0.3s;
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: var(--color-amethyst);
 
         &::before {
@@ -104,9 +105,17 @@
       max-width: 99%;
     }
 
+    @include mobile-sm {
+      margin-bottom: 21px;
+    }
+
     @include xs {
       margin-bottom: 10px;
     }
+  }
+
+  &__link {
+    transition: color 0.3s;
   }
 
   &__subtitle {

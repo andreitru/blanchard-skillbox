@@ -87,7 +87,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 61px;
+      margin-right: 62px;
 
       @include lg {
         margin-right: 30px;
@@ -107,6 +107,7 @@
     font-size: 18px;
     line-height: 25px;
     color: var(--color-white);
+    transition: color 0.3s;
 
     &:hover {
       text-decoration: none;
@@ -236,7 +237,7 @@
   }
 
   &__top {
-    position: relative;
+    //position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -318,7 +319,7 @@
     }
   }
 
-  &--showed .header-select__dropdown {
+  &--showed > .header-select__dropdown {
     display: block;
     transition: 0.5s;
     animation: show 0.5s 1;
@@ -326,7 +327,20 @@
     animation-fill-mode: forwards;
   }
 
-  &--showed .header-select__top {
+  &--showed > .header-select__top {
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__subselect > &__dropdown {
+    position: absolute;
+    //z-index: 100;
+    left: 260px;
+    top: 0;
+  }
+
+  &__item--showed &__top {
     svg {
       transform: rotate(-90deg);
     }

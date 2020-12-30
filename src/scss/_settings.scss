@@ -21,9 +21,7 @@ img {
 }
 
 a {
-  outline: none;
   text-decoration: none;
-  transition: color 0.3s;
 
   &:focus {
     @include focus;

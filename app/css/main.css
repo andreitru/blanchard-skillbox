@@ -760,9 +760,7 @@ samp {
 }
 a {
   background-color: transparent;
-  outline: 0;
-  text-decoration: none;
-  transition: color .3s
+  text-decoration: none
 }
 abbr[title] {
   border-bottom: none;
@@ -1185,7 +1183,7 @@ ul {
   margin-right: auto
 }
 .nav__item:not(:last-child) {
-  margin-right: 61px
+  margin-right: 62px
 }
 @media (max-width:1500px) {
   .nav__item:not(:last-child) {
@@ -1196,7 +1194,8 @@ ul {
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
-  color: var(--color-white)
+  color: var(--color-white);
+  transition: color .3s
 }
 .nav__link:hover {
   text-decoration: none
@@ -1325,7 +1324,6 @@ ul {
   margin-right: 101px
 }
 .header-select__top {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1395,13 +1393,21 @@ ul {
     outline-offset: -2px
   }
 }
-.header-select--showed .header-select__dropdown {
+.header-select--showed > .header-select__dropdown {
   display: block;
   transition: .5s;
   -webkit-animation: .5s .1s forwards show;
   animation: .5s .1s forwards show
 }
-.header-select--showed .header-select__top svg {
+.header-select--showed > .header-select__top svg {
+  transform: rotate(-90deg)
+}
+.header-select__subselect > .header-select__dropdown {
+  position: absolute;
+  left: 260px;
+  top: 0
+}
+.header-select__item--showed .header-select__top svg {
   transform: rotate(-90deg)
 }
 .search label {
@@ -1838,7 +1844,8 @@ ul {
   color: var(--color-white)
 }
 .gallery__link {
-  color: var(--color-violet)
+  color: var(--color-violet);
+  transition: color .3s
 }
 .gallery-select {
   position: relative;
@@ -1884,6 +1891,9 @@ ul {
   .hero__btn:hover {
     border-color: #d1a9f0;
     color: var(--color-white)
+  }
+  .gallery__link:hover {
+    color: var(--color-amethyst)
   }
   .gallery-select__top:hover {
     text-decoration: none;
@@ -2445,7 +2455,8 @@ ul {
   }
 }
 .accordion__link {
-  color: var(--color-signal-black)
+  color: var(--color-signal-black);
+  transition: color .3s
 }
 @media (min-width:577px) {
   .accordion__title:hover .accordion__subtitle {
@@ -2476,16 +2487,19 @@ ul {
   padding-top: 7px;
   padding-bottom: 81px
 }
+.events__title {
+  margin-bottom: 18px
+}
 @media (max-width:992px) {
   .accordion__item {
     width: 35%
   }
   .events__container {
-    padding-bottom: 85px
+    padding-bottom: 82px
   }
-}
-.events__title {
-  margin-bottom: 18px
+  .events__title {
+    margin-bottom: 21px
+  }
 }
 .events__list {
   display: flex;
@@ -2607,18 +2621,21 @@ ul {
     color: var(--color-violet)
   }
 }
+.event:nth-child(n+4) {
+  display: none
+}
 .event__date,
 .event__place {
   display: block;
   text-align: right
 }
-.event--hidden {
-  display: none
-}
 @media (max-width:992px) {
   .event {
     width: 49%;
     max-width: 317px
+  }
+  .event:nth-child(n+3) {
+    display: none
   }
 }
 @media (max-width:576px) {
@@ -2983,14 +3000,14 @@ ul {
     padding-right: 0
   }
   .range span {
-    padding: 9px
+    padding: 8px
   }
 }
 .range input {
   outline: 0;
   border: none;
   padding: 10px;
-  width: 82px;
+  width: 79px;
   color: var(--color-white);
   background: rgba(157,92,208,.5)
 }
@@ -3060,7 +3077,7 @@ input[type=number] {
 }
 @media (max-width:1200px) {
   .editions-slider__content {
-    padding-top: 11px
+    padding-top: 9px
   }
 }
 .editions-slider__text-block {
@@ -3144,7 +3161,7 @@ input[type=number] {
 }
 @media (max-width:1024px) {
   .projects__container {
-    padding-bottom: 70px
+    padding-bottom: 67px
   }
 }
 @media (max-width:992px) {
@@ -3210,22 +3227,31 @@ input[type=number] {
   transform: translate(-50%,-50%);
   transition: fill .3s
 }
+.projects__text span:focus,
 .projects__text span:hover {
   background-color: var(--color-amethyst)
 }
+.projects__text span:focus::before,
 .projects__text span:hover::before {
   opacity: 1
 }
+.projects__text span:focus::after,
 .projects__text span:hover::after {
   z-index: 0;
   opacity: 1
 }
+.projects__text span:focus svg,
 .projects__text span:hover svg {
   fill: var(--color-white)
 }
 @media (max-width:1500px) {
   .projects__text {
     max-width: 80%
+  }
+}
+@media (max-width:992px) {
+  .projects__text {
+    margin-bottom: 21px
   }
 }
 @media (max-width:576px) {
@@ -3240,6 +3266,9 @@ input[type=number] {
   .projects__text {
     margin-bottom: 10px
   }
+}
+.projects__link {
+  transition: color .3s
 }
 .projects__subtitle {
   margin: 0 0 17px
@@ -3642,4 +3671,3 @@ input[type=number] {
     height: 25px
   }
 }
-/*# sourceMappingURL=main.css.map */

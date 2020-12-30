@@ -335,7 +335,7 @@
     }
 
     @include xs {
-      padding: 9px;
+      padding: 8px;
     }
   }
 
@@ -343,7 +343,7 @@
     outline: none;
     border: none;
     padding: 10px;
-    width: 82px;
+    width: 79px;
     color: var(--color-white);
     background: rgba(157, 92, 208, 0.5);
 
@@ -436,7 +436,7 @@ input[type="number"] {
     max-width: 350px;
 
     @include md {
-      padding-top: 11px;
+      padding-top: 9px;
     }
 
     @include xs {
