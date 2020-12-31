@@ -1,7 +1,7 @@
 <header class="header">
   <div class="header__top header-top">
     <div class="container header-top__container">
-      <button class="burger btn-reset header__burger">
+      <button class="burger btn-reset header__burger" aria-label="главное меню">
         <span class="burger__line"></span>
       </button>
       <a href="#" class="header-top__logo">
@@ -9,7 +9,7 @@
       </a>
       <div class="search search--mobile">
         <label for="search-mobile">
-          <button class="btn-reset search__btn search__btn--mobile" type="submit">
+          <button class="btn-reset search__btn search__btn--mobile" type="submit" aria-label="поиск по сайту">
             <svg>
               <use xlink:href="img/sprite.svg#search"></use>
             </svg>
@@ -48,33 +48,7 @@
             </svg>
           </div>
           <div class="header-select__dropdown">
-            <div class="header-select__realism header-select header-select__subselect"
-                 data-subselect="Передвижничество">
-              <div class="header-select__dropdown">
-                <ul class="header-select__list">
-                  <li class="header-select__item">Репин</li>
-                  <li class="header-select__item">Суриков</li>
-                  <li class="header-select__item">Мясоедов</li>
-                  <li class="header-select__item">Дубовской</li>
-                  <li class="header-select__item">Саврасов</li>
-                  <li class="header-select__item">Шишкин</li>
-                </ul>
-              </div>
-            </div>
             <ul class="header-select__list">
-              <li class="header-select__item header-select__item--subselect">
-                <div class="header-select__top" tabindex="0" role="combobox" aria-label="передвижничество"
-                     aria-expanded="false">
-                  Передвижничество
-                  <svg>
-                    <use xlink:href="img/sprite.svg#arrow"></use>
-                  </svg>
-                </div>
-              </li>
-              <li class="header-select__item">Авилов</li>
-              <li class="header-select__item">Баженов</li>
-              <li class="header-select__item">Вайреда</li>
-              <li class="header-select__item">Гай</li>
               <li class="header-select__item">Дадлез</li>
               <li class="header-select__item">Ерёмин</li>
             </ul>

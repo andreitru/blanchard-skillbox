@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Страница художественной галереи Blanchard">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
@@ -16,7 +17,7 @@
   <header class="header">
   <div class="header__top header-top">
     <div class="container header-top__container">
-      <button class="burger btn-reset header__burger">
+      <button class="burger btn-reset header__burger" aria-label="главное меню">
         <span class="burger__line"></span>
       </button>
       <a href="#" class="header-top__logo">
@@ -24,7 +25,7 @@
       </a>
       <div class="search search--mobile">
         <label for="search-mobile">
-          <button class="btn-reset search__btn search__btn--mobile" type="submit">
+          <button class="btn-reset search__btn search__btn--mobile" type="submit" aria-label="поиск по сайту">
             <svg>
               <use xlink:href="img/sprite.svg#search"></use>
             </svg>
@@ -63,33 +64,7 @@
             </svg>
           </div>
           <div class="header-select__dropdown">
-            <div class="header-select__realism header-select header-select__subselect"
-                 data-subselect="Передвижничество">
-              <div class="header-select__dropdown">
-                <ul class="header-select__list">
-                  <li class="header-select__item">Репин</li>
-                  <li class="header-select__item">Суриков</li>
-                  <li class="header-select__item">Мясоедов</li>
-                  <li class="header-select__item">Дубовской</li>
-                  <li class="header-select__item">Саврасов</li>
-                  <li class="header-select__item">Шишкин</li>
-                </ul>
-              </div>
-            </div>
             <ul class="header-select__list">
-              <li class="header-select__item header-select__item--subselect">
-                <div class="header-select__top" tabindex="0" role="combobox" aria-label="передвижничество"
-                     aria-expanded="false">
-                  Передвижничество
-                  <svg>
-                    <use xlink:href="img/sprite.svg#arrow"></use>
-                  </svg>
-                </div>
-              </li>
-              <li class="header-select__item">Авилов</li>
-              <li class="header-select__item">Баженов</li>
-              <li class="header-select__item">Вайреда</li>
-              <li class="header-select__item">Гай</li>
               <li class="header-select__item">Дадлез</li>
               <li class="header-select__item">Ерёмин</li>
             </ul>
@@ -249,92 +224,92 @@
         <div class="swiper-wrapper gallery-slider__wrapper">
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-1.jpeg" alt="Картина 1">
+              <img src="img/gallery/gallery-1.jpeg" alt="Картина 1" loading="lazy" width="350" height="470">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-2.jpeg" alt="Картина 2">
+              <img src="img/gallery/gallery-2.jpeg" alt="Картина 2" loading="lazy" width="350" height="442">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-3.jpeg" alt="Картина 3">
+              <img src="img/gallery/gallery-3.jpeg" alt="Картина 3" loading="lazy" width="350" height="428">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-4.jpeg" alt="Картина 4">
+              <img src="img/gallery/gallery-4.jpeg" alt="Картина 4" loading="lazy" width="352" height="367">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-5.jpeg" alt="Картина 5">
+              <img src="img/gallery/gallery-5.jpeg" alt="Картина 5" loading="lazy" width="374" height="367">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-6.jpeg" alt="Картина 6">
+              <img src="img/gallery/gallery-6.jpeg" alt="Картина 6" loading="lazy" width="367" height="367">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-7.jpeg" alt="Картина 7">
+              <img src="img/gallery/gallery-7.jpeg" alt="Картина 7" loading="lazy" width="350" height="571">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-8.jpeg" alt="Картина 8">
+              <img src="img/gallery/gallery-8.jpeg" alt="Картина 8" loading="lazy" width="350" height="593">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-9.jpeg" alt="Картина 9">
+              <img src="img/gallery/gallery-9.jpeg" alt="Картина 9" loading="lazy" width="485" height="367">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-10.jpeg" alt="Картина 10">
+              <img src="img/gallery/gallery-10.jpeg" alt="Картина 10" loading="lazy" width="367" height="367">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-11.jpeg" alt="Картина 11">
+              <img src="img/gallery/gallery-11.jpeg" alt="Картина 11" loading="lazy" width="365" height="367">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-12.jpeg" alt="Картина 12">
+              <img src="img/gallery/gallery-12.jpeg" alt="Картина 12" loading="lazy" width="431" height="367">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-13.jpeg" alt="Картина 13">
+              <img src="img/gallery/gallery-13.jpeg" alt="Картина 13" loading="lazy" width="350" height="427">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-14.jpeg" alt="Картина 14">
+              <img src="img/gallery/gallery-14.jpeg" alt="Картина 14" loading="lazy" width="366" height="367">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-15.jpeg" alt="Картина 15">
+              <img src="img/gallery/gallery-15.jpeg" alt="Картина 15" loading="lazy" width="350" height="428">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-16.jpeg" alt="Картина 16">
+              <img src="img/gallery/gallery-16.jpeg" alt="Картина 16" loading="lazy" width="412" height="367">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-17.jpeg" alt="Картина 17">
+              <img src="img/gallery/gallery-17.jpeg" alt="Картина 17" loading="lazy" width="459" height="367">
             </div>
           </div>
           <div class="gallery-slider__slide swiper-slide">
             <div tabindex="0">
-              <img src="img/gallery/gallery-18.jpeg" alt="Картина 18">
+              <img src="img/gallery/gallery-18.jpeg" alt="Картина 18" loading="lazy" width="350" height="470">
             </div>
           </div>
         </div>
@@ -350,19 +325,19 @@
       <div class="catalog-top__flags flags">
         <ul class="flags__list">
           <li class="flags__item" data-flag="france" tabindex="0">
-            <a aria-label="Франция" class="flags__link flags__link--france"></a>
+            <span aria-label="Франция" class="flags__link flags__link--france"></span>
           </li>
           <li class="flags__item" data-flag="germany" tabindex="0">
-            <a aria-label="Германия" class="flags__link flags__link--germany"></a>
+            <span aria-label="Германия" class="flags__link flags__link--germany"></span>
           </li>
           <li class="flags__item flags__item--active" data-flag="italy" tabindex="0">
-            <a aria-label="Италия" class="flags__link flags__link--italy"></a>
+            <span aria-label="Италия" class="flags__link flags__link--italy"></span>
           </li>
           <li class="flags__item" data-flag="russia" tabindex="0">
-            <a aria-label="Россия" class="flags__link flags__link--russia"></a>
+            <span aria-label="Россия" class="flags__link flags__link--russia"></span>
           </li>
           <li class="flags__item" data-flag="belgium" tabindex="0">
-            <a aria-label="Бельгия" class="flags__link flags__link--belgium"></a>
+            <span aria-label="Бельгия" class="flags__link flags__link--belgium"></span>
           </li>
         </ul>
       </div>
@@ -377,7 +352,7 @@
 
       <div class="catalog-bottom__left">
         <div class="painter painter--active">
-          <img src="img/catalog/domenico.jpg" alt="фото Доменико Гирландайо" class="painter__img">
+          <img src="img/catalog/domenico.jpg" alt="фото Доменико Гирландайо" class="painter__img" loading="lazy" width="750" height="470">
           <p class="painter__name subtitle">Доменико Гирландайо</p>
           <span class="painter__years descr">2 июня 1448 — 11 января 1494.</span>
           <p class="text painter__text">Один из ведущих флорентийских художников Кватроченто,
@@ -388,7 +363,7 @@
             граждане Флоренции в костюмах того времени).</p>
         </div>
         <div class="painter">
-          <img src="img/catalog/benedetto.jpg" alt="Бенедетто ди Биндо" class="painter__img">
+          <img src="img/catalog/benedetto.jpg" alt="Бенедетто ди Биндо" class="painter__img" loading="lazy" width="941" height="750">
           <p class="painter__name subtitle">Бенедетто ди Биндо</p>
           <span class="painter__years descr">ок. 1380—85 — 19 сентября 1417.</span>
           <p class="text painter__text">Бенедетто ди Биндо остался в истории искусства как сиенский художник, так
@@ -400,7 +375,7 @@
             произведения Джованни да Милано.</p>
         </div>
         <div class="painter">
-          <img src="img/catalog/bergonione.jpg" alt="Доменико Гирландайо" class="painter__img">
+          <img src="img/catalog/bergonione.jpg" alt="Бергоньоне, Амброджо" class="painter__img" loading="lazy" width="750" height="750">
           <p class="painter__name subtitle">Бергоньоне, Амброджо</p>
           <span class="painter__years descr">1453 — 1523.</span>
           <p class="text painter__text">Прозвище говорит о его тяготении к бургундской школе, по манере ему близок
@@ -413,7 +388,7 @@
 
         </div>
         <div class="painter">
-          <img src="img/catalog/bissolo.jpg" alt="Биссоло, Франческо" class="painter__img">
+          <img src="img/catalog/bissolo.jpg" alt="Биссоло, Франческо" class="painter__img" loading="lazy" width="388" height="599">
           <p class="painter__name subtitle">Биссоло, Франческо</p>
           <span class="painter__years descr">1470 или 1472 — 20 апреля 1554.</span>
           <p class="text painter__text">Сын художника. Ученик Джованни Беллини. С 1490 переехал в мастерскую Беллини. С
@@ -427,7 +402,7 @@
             County Museum of Art), Дэйтоновском институте искусств (штат Огайо, США) и др.</p>
         </div>
         <div class="painter">
-          <img src="img/catalog/painter.jpg" alt="Художник" class="painter__img">
+          <img src="img/catalog/painter.jpg" alt="Художник" class="painter__img" loading="lazy" width="800" height="600">
           <p class="painter__name subtitle">Имя художника</p>
           <span class="painter__years descr">годы жизни</span>
           <p class="text painter__text">Один из ведущих мировых художников. Автор известных шедевров</p>
@@ -1316,7 +1291,7 @@
     <div class="swiper-container events-slider">
       <ul class="events__list swiper-wrapper events-slider__wrapper">
         <li class="events__item event swiper-slide">
-          <img src="img/events/events-1.jpg" alt="Музей им. Щусева" class="event__img">
+          <img src="img/events/events-1.jpg" alt="Музей им. Щусева" class="event__img" loading="lazy" width="500" height="300">
           <div class="event__about">
             <div class="event__spans">
               <span class="event__place descr">Музей им. Щусева</span>
@@ -1338,7 +1313,7 @@
           </div>
         </li>
         <li class="events__item event swiper-slide">
-          <img src="img/events/events-2.jpg" alt="ММОМА" class="event__img">
+          <img src="img/events/events-2.jpg" alt="ММОМА" class="event__img" loading="lazy" width="500" height="300">
           <div class="event__about">
             <div class="event__spans">
               <span class="event__place descr">ММОМА</span>
@@ -1359,7 +1334,7 @@
           </div>
         </li>
         <li class="events__item event  swiper-slide">
-          <img src="img/events/events-3.jpg" alt="Еврейский музей" class="event__img">
+          <img src="img/events/events-3.jpg" alt="Еврейский музей" class="event__img" loading="lazy" width="500" height="300">
           <div class="event__about">
             <div class="event__spans">
               <span class="event__place descr">Еврейский музей</span>
@@ -1381,7 +1356,7 @@
           </div>
         </li>
         <li class="events__item event swiper-slide">
-          <img src="img/events/events-3.jpg" alt="Еврейский музей" class="event__img">
+          <img src="img/events/events-3.jpg" alt="Еврейский музей" class="event__img" loading="lazy" width="500" height="300">
           <div class="event__about">
             <div class="event__spans">
               <span class="event__place descr">Еврейский музей</span>
@@ -1403,7 +1378,7 @@
           </div>
         </li>
         <li class="events__item event swiper-slide">
-          <img src="img/events/events-4.jpg" alt="Третьяковка на Крымском валу" class="event__img">
+          <img src="img/events/events-4.jpg" alt="Третьяковка на Крымском валу" class="event__img" loading="lazy" width="500" height="300">
           <div class="event__about">
             <div class="event__spans">
               <span class="event__place descr">Третьяковка на Крымском валу</span>
@@ -1423,7 +1398,7 @@
           </div>
         </li>
         <li class="events__item event swiper-slide">
-          <img src="img/events/events-5.jpg" alt="ММАМ" class="event__img">
+          <img src="img/events/events-5.jpg" alt="ММАМ" class="event__img" loading="lazy" width="500" height="300">
           <div class="event__about">
             <div class="event__spans">
               <span class="event__place descr">ММАМ</span>
@@ -1465,84 +1440,84 @@
               <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
               <span class="custom-checkbox__text" tabindex="0">Бестселлеры</span>
             </label>
-            <button class="btn-reset custom-checkbox__btn"></button>
+            <button class="btn-reset custom-checkbox__btn" aria-label="убрать категорию"></button>
           </li>
           <li class="categories__item">
             <label data-text="Искусство" class="custom-checkbox">
               <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
               <span class="custom-checkbox__text" tabindex="0">Искусство</span>
             </label>
-            <button class="btn-reset custom-checkbox__btn"></button>
+            <button class="btn-reset custom-checkbox__btn" aria-label="убрать категорию"></button>
           </li>
           <li class="categories__item">
             <label data-text="Архитектура" class="custom-checkbox">
               <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
               <span class="custom-checkbox__text" tabindex="0">Архитектура</span>
             </label>
-            <button class="btn-reset custom-checkbox__btn"></button>
+            <button class="btn-reset custom-checkbox__btn" aria-label="убрать категорию"></button>
           </li>
           <li class="categories__item checked">
             <label data-text="Дизайн" class="custom-checkbox">
               <input checked type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
               <span class="custom-checkbox__text" tabindex="0">Дизайн</span>
             </label>
-            <button class="btn-reset custom-checkbox__btn"></button>
+            <button class="btn-reset custom-checkbox__btn" aria-label="убрать категорию"></button>
           </li>
           <li class="categories__item">
             <label data-text="Мода" class="custom-checkbox">
               <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
               <span class="custom-checkbox__text" tabindex="0">Мода</span>
             </label>
-            <button class="btn-reset custom-checkbox__btn"></button>
+            <button class="btn-reset custom-checkbox__btn" aria-label="убрать категорию"></button>
           </li>
           <li class="categories__item">
             <label data-text="Детям" class="custom-checkbox">
               <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
               <span class="custom-checkbox__text" tabindex="0">Детям</span>
             </label>
-            <button class="btn-reset custom-checkbox__btn"></button>
+            <button class="btn-reset custom-checkbox__btn" aria-label="убрать категорию"></button>
           </li>
           <li class="categories__item">
             <label data-text="Художественная литература" class="custom-checkbox">
               <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
               <span class="custom-checkbox__text" tabindex="0">Художественная литература</span>
             </label>
-            <button class="btn-reset custom-checkbox__btn"></button>
+            <button class="btn-reset custom-checkbox__btn" aria-label="убрать категорию"></button>
           </li>
           <li class="categories__item">
             <label data-text="Публицистика" class="custom-checkbox">
               <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
               <span class="custom-checkbox__text" tabindex="0">Публицистика</span>
             </label>
-            <button class="btn-reset custom-checkbox__btn"></button>
+            <button class="btn-reset custom-checkbox__btn" aria-label="убрать категорию"></button>
           </li>
           <li class="categories__item">
             <label data-text="Путеводителя" class="custom-checkbox">
               <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
               <span class="custom-checkbox__text" tabindex="0">Путеводители</span>
             </label>
-            <button class="btn-reset custom-checkbox__btn"></button>
+            <button class="btn-reset custom-checkbox__btn" aria-label="убрать категорию"></button>
           </li>
           <li class="categories__item">
             <label data-text="Философия" class="custom-checkbox">
               <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
               <span class="custom-checkbox__text" tabindex="0">Философия</span>
             </label>
-            <button class="btn-reset custom-checkbox__btn"></button>
+            <button class="btn-reset custom-checkbox__btn" aria-label="убрать категорию"></button>
           </li>
           <li class="categories__item">
             <label data-text="Учебная литература" class="custom-checkbox">
               <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
               <span class="custom-checkbox__text" tabindex="0">Учебная литература</span>
             </label>
-            <button class="btn-reset custom-checkbox__btn"></button>
+            <button class="btn-reset custom-checkbox__btn" aria-label="убрать категорию"></button>
           </li>
           <li class="categories__item">
             <label data-text="Журналы и газеты" class="custom-checkbox">
               <input type="checkbox" class="custom-checkbox__input visually-hidden" tabindex="-1">
               <span class="custom-checkbox__text" tabindex="0">Журналы и газеты</span>
             </label>
-            <button class="btn-reset custom-checkbox__btn"></button>
+            <button class="btn-reset custom-checkbox__btn" aria-label="убрать категорию"></button>
           </li>
         </ul>
         <div class="editions-left__price price">
@@ -1570,7 +1545,7 @@
         </div>
         <div class="swiper-wrapper editions-slider__wrapper">
           <div class="swiper-slide editions-slider__slide">
-            <img src="img/editions/editions-1.jpg" alt="1" class="editions-slider__img">
+            <img src="img/editions/editions-1.jpg" alt="1" class="editions-slider__img" loading="lazy" width="350" height="390">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
                 <p class="editions-slider__name">Искусство цвета</p>
@@ -1581,7 +1556,7 @@
             <button class="btn-reset btn editions-slider__btn"><span>Заказать</span></button>
           </div>
           <div class="swiper-slide editions-slider__slide">
-            <img src="img/editions/editions-2.jpg" alt="2" class="editions-slider__img">
+            <img src="img/editions/editions-2.jpg" alt="2" class="editions-slider__img" loading="lazy" width="350" height="390">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
                 <p class="editions-slider__name">Типографика</p>
@@ -1592,7 +1567,7 @@
             <button class="btn-reset btn editions-slider__btn"><span>Заказать</span></button>
           </div>
           <div class="swiper-slide editions-slider__slide">
-            <img src="img/editions/editions-3.jpg" alt="3" class="editions-slider__img">
+            <img src="img/editions/editions-3.jpg" alt="3" class="editions-slider__img" loading="lazy" width="350" height="390">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
                 <p class="editions-slider__name">Книга про буквы</p>
@@ -1603,7 +1578,7 @@
             <button class="btn-reset btn editions-slider__btn"><span>Заказать</span></button>
           </div>
           <div class="swiper-slide editions-slider__slide">
-            <img src="img/editions/editions-4.jpg" alt="4" class="editions-slider__img">
+            <img src="img/editions/editions-4.jpg" alt="4" class="editions-slider__img" loading="lazy" width="350" height="390">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
                 <p class="editions-slider__name">Николай Ильин</p>
@@ -1614,7 +1589,7 @@
             <button class="btn-reset btn editions-slider__btn"><span>Заказать</span></button>
           </div>
           <div class="swiper-slide editions-slider__slide">
-            <img src="img/editions/editions-5.jpg" alt="5" class="editions-slider__img">
+            <img src="img/editions/editions-5.jpg" alt="5" class="editions-slider__img" loading="lazy" width="350" height="390">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
                 <p class="editions-slider__name">Модульные сетки в графическом дизайне</p>
@@ -1625,7 +1600,7 @@
             <button class="btn-reset btn editions-slider__btn"><span>Заказать</span></button>
           </div>
           <div class="swiper-slide editions-slider__slide">
-            <img src="img/editions/editions-6.jpg" alt="6" class="editions-slider__img">
+            <img src="img/editions/editions-6.jpg" alt="6" class="editions-slider__img" loading="lazy" width="350" height="390">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
                 <p class="editions-slider__name">Эволюция графических стилей</p>
@@ -1636,7 +1611,7 @@
             <button class="btn-reset btn editions-slider__btn"><span>Заказать</span></button>
           </div>
           <div class="swiper-slide editions-slider__slide">
-            <img src="img/editions/editions-7.jpg" alt="7" class="editions-slider__img">
+            <img src="img/editions/editions-7.jpg" alt="7" class="editions-slider__img" loading="lazy" width="350" height="390">
             <div class="editions-slider__content">
               <div class="editions-slider__text-block">
                 <p class="editions-slider__name">Искусство и визуальное восприятие</p>
@@ -1679,7 +1654,7 @@
       резервов призывают нас к новым свершениям, которые, в свою
       очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости.
       Подробнее: <a href="https://blanchard-art.ru/projects/about" target="_blank"
-                   class="projects__link link">blanchard-art.ru/projects/about</a>
+                   class="projects__link link" rel="noopener noreferrer">blanchard-art.ru/projects/about</a>
     </p>
     <h3 class="projects__subtitle subtitle">Партнёры проектов:</h3>
     <div class="projects__bottom">
@@ -1740,9 +1715,9 @@
           <p class="subtitle contacts-left__social-title">Связаться в один клик</p>
           <div class="contacts-left__social">
             <a href="https://wa.me/79187460255" target="_blank"
-               class="contacts-left__social-btn contacts-left__social-btn--whatsapp" aria-label="whatsapp"></a>
+               class="contacts-left__social-btn contacts-left__social-btn--whatsapp" aria-label="whatsapp" rel="noopener noreferrer"></a>
             <a href="https://t.me/andreitru" target="_blank"
-               class="contacts-left__social-btn contacts-left__social-btn--telegram" aria-label="telegram"></a>
+               class="contacts-left__social-btn contacts-left__social-btn--telegram" aria-label="telegram" rel="noopener noreferrer"></a>
           </div>
         </div>
 
@@ -1762,11 +1737,11 @@
     </a>
     <div class="footer__social footer-social">
       <a href="https://vk.com" class="footer-social__link footer-social__link--vk" target="_blank"
-         aria-label="вконтакте"></a>
+         aria-label="вконтакте" rel="noopener noreferrer"></a>
       <a href="https://instagram.com" class="footer-social__link footer-social__link--instagram" target="_blank"
-         aria-label="instagram"></a>
+         aria-label="instagram" rel="noopener noreferrer"></a>
       <a href="https://fb.com" class="footer-social__link footer-social__link--fb" target="_blank"
-         aria-label="facebook"></a>
+         aria-label="facebook" rel="noopener noreferrer"></a>
     </div>
   </div>
 </footer>

@@ -160,84 +160,54 @@
   height: 150px;
 
   &__slide {
+    position: relative;
     width: 100%;
     height: 100%;
     max-width: 450px;
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-    transition: background-image 0.3s;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+
+    &:hover {
+      filter: grayscale(0);
+    }
 
     &--1 {
-      background-image: url('../img/projects/freelands.jpg');
-
-      &:hover {
-        background-image: url('../img/projects/freelands-color.jpg');
-      }
+      background-image: url('../img/projects/freelands-color.jpg');
     }
 
     &--2 {
-      background-image: url('../img/projects/institute.jpg');
-
-      &:hover {
-        background-image: url('../img/projects/institute-color.jpg');
-      }
+      background-image: url('../img/projects/institute-color.jpg');
     }
 
     &--3 {
-      background-image: url('../img/projects/workhouse.jpg');
-
-      &:hover {
-        background-image: url('../img/projects/workhouse-color.jpg');
-      }
+      background-image: url('../img/projects/workhouse-color.jpg');
     }
 
     &--4 {
-      background-image: url('../img/projects/1849.jpg');
-
-      &:hover {
-        background-image: url('../img/projects/1849-color.jpg');
-      }
+      background-image: url('../img/projects/1849-color.jpg');
     }
 
     &--5 {
-      background-image: url('../img/projects/hiscox.jpg');
-
-      &:hover {
-        background-image: url('../img/projects/hiscox-color.jpg');
-      }
+      background-image: url('../img/projects/hiscox-color.jpg');
     }
 
     &--6 {
-      background-image: url('../img/projects/camden.jpg');
-
-      &:hover {
-        background-image: url('../img/projects/camden-color.jpg');
-      }
+      background-image: url('../img/projects/camden-color.jpg');
     }
 
     &--7 {
-      background-image: url('../img/projects/stassen.jpg');
-
-      &:hover {
-        background-image: url('../img/projects/stassen-color.jpg');
-      }
+      background-image: url('../img/projects/stassen-color.jpg');
     }
 
     &--8 {
-      background-image: url('../img/projects/watts.jpg');
-
-      &:hover {
-        background-image: url('../img/projects/watts-color.jpg');
-      }
+      background-image: url('../img/projects/watts-color.jpg');
     }
 
     &--9 {
-      background-image: url('../img/projects/esad.jpg');
-
-      &:hover {
-        background-image: url('../img/projects/esad-color.jpg');
-      }
+      background-image: url('../img/projects/esad-color.jpg');
     }
   }
 

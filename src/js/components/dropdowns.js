@@ -9,13 +9,6 @@ function showHeaderSelect(item, event) {
   vars.$headerSelect.forEach((i) => {
     if (i !== event.currentTarget) {
       i.classList.remove('header-select--showed');
-      const iSubSelect = i.querySelector('.header-select__item--subselect');
-      if (iSubSelect) {
-        iSubSelect.classList.remove('header-select__item--showed');
-        vars.$headerSubSelect.forEach(select => {
-          select.classList.remove('header-select--showed');
-        })
-      }
 
       vars.$headerSelectTitles.forEach(title => {
         title.setAttribute('aria-expanded', 'false');
@@ -25,47 +18,10 @@ function showHeaderSelect(item, event) {
 
   event.currentTarget.classList.toggle('header-select--showed');
 
-  const subSelect = item.querySelector('.header-select__item--subselect');
-  const selectItems = item.querySelectorAll('.header-select__item');
-
-  selectItems.forEach(item => {
-    item.addEventListener('click', (e) => {
-      if (item.classList.contains('header-select__item--subselect')) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-    })
-
-    if (subSelect) {
-      subSelect.addEventListener('click', (e) => {
-        const subSelectTitle = e.currentTarget.querySelector('.header-select__top');
-        vars.$headerSubSelect.forEach(select => {
-          if (select.dataset.subselect === subSelectTitle.innerText) {
-            select.classList.toggle('header-select--showed');
-            subSelect.classList.toggle('header-select__item--showed');
-          }
-        })
-
-        if (subSelect.classList.contains('header-select__item--showed')) {
-          subSelectTitle.setAttribute('aria-expanded', 'true');
-        } else {
-          subSelectTitle.setAttribute('aria-expanded', 'false');
-        }
-      })
-    }
-  })
-
   if (event.currentTarget.classList.contains('header-select--showed')) {
     item.querySelector('.header-select__top').setAttribute('aria-expanded', 'true');
   } else {
     item.querySelector('.header-select__top').setAttribute('aria-expanded', 'false');
-    if (subSelect) {
-      subSelect.classList.remove('header-select__item--showed');
-      vars.$headerSubSelect.forEach(select => {
-        select.classList.remove('header-select--showed');
-      })
-    }
-
   }
 }
 

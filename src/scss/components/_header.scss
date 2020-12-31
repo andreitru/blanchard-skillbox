@@ -237,7 +237,6 @@
   }
 
   &__top {
-    //position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -284,7 +283,7 @@
 
   &__list {
     width: 240px;
-    height: 220px;
+    max-height: 220px;
   }
 
   &__item {
@@ -319,7 +318,7 @@
     }
   }
 
-  &--showed > .header-select__dropdown {
+  &--showed .header-select__dropdown {
     display: block;
     transition: 0.5s;
     animation: show 0.5s 1;
@@ -327,20 +326,7 @@
     animation-fill-mode: forwards;
   }
 
-  &--showed > .header-select__top {
-    svg {
-      transform: rotate(-90deg);
-    }
-  }
-
-  &__subselect > &__dropdown {
-    position: absolute;
-    //z-index: 100;
-    left: 260px;
-    top: 0;
-  }
-
-  &__item--showed &__top {
+  &--showed .header-select__top {
     svg {
       transform: rotate(-90deg);
     }
@@ -358,7 +344,6 @@
     input {
       border-bottom: 1px solid rgba(255, 255, 255, 0.85);
       padding-bottom: 4px;
-      max-width: 219px;
       font-weight: 400;
       font-size: 18px;
       color: currentColor;
