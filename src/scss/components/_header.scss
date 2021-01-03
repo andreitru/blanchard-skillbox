@@ -334,53 +334,37 @@
 }
 
 .search {
-  label {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--color-white);
-    transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-white);
+  transition: color 0.3s;
 
-    input {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.85);
-      padding-bottom: 4px;
-      width: 219px;
-      font-weight: 400;
-      font-size: 18px;
-      color: currentColor;
+  input {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+    padding-bottom: 4px;
+    width: 219px;
+    font-weight: 400;
+    font-size: 18px;
+    color: currentColor;
 
-      &::placeholder {
-        color: var(--color-white);
-        opacity: 0.85;
-      }
-
-      @include md {
-        max-width: 140px;
-      }
-
-      @include sm {
-        max-width: 110px;
-        font-size: 14px;
-      }
-
-      @include xs {
-        max-width: 80px;
-        font-size: 10px;
-      }
+    &::placeholder {
+      color: var(--color-white);
+      opacity: 0.85;
     }
 
-    &:focus-within {
-      color: var(--color-violet);
+    @include md {
+      max-width: 140px;
     }
 
-    &:hover {
-      @include exclude-xs {
-        color: var(--color-violet);
+    @include sm {
+      max-width: 110px;
+      font-size: 14px;
+    }
 
-        input {
-          border-color: currentColor;
-        }
-      }
+    @include xs {
+      max-width: 80px;
+      font-size: 10px;
     }
   }
 
@@ -413,6 +397,17 @@
 
   &:focus-within {
     outline: 2px solid var(--color-krayola);
+    color: var(--color-violet);
+  }
+
+  &:hover {
+    @include exclude-xs {
+      color: var(--color-violet);
+
+      input {
+        border-color: currentColor;
+      }
+    }
   }
 
   &--mobile {
@@ -434,7 +429,8 @@
     }
 
     @include md {
-      display: block;
+      display: flex;
+      align-items: unset;
     }
 
     @include xs {

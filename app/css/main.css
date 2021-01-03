@@ -1300,7 +1300,7 @@ ul {
     left: 0;
     transition: left .3s
   }
-  .search label input {
+  .search input {
     max-width: 140px
   }
 }
@@ -1405,14 +1405,14 @@ ul {
 .header-select--showed .header-select__top svg {
   transform: rotate(-90deg)
 }
-.search label {
+.search {
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: var(--color-white);
   transition: color .3s
 }
-.search label input {
+.search input {
   border-bottom: 1px solid rgba(255,255,255,.85);
   padding-bottom: 4px;
   width: 219px;
@@ -1420,30 +1420,27 @@ ul {
   font-size: 18px;
   color: currentColor
 }
-.search label input::-moz-placeholder {
+.search input::-moz-placeholder {
   color: var(--color-white);
   opacity: .85
 }
-.search label input:-ms-input-placeholder {
+.search input:-ms-input-placeholder {
   color: var(--color-white);
   opacity: .85
 }
-.search label input::-ms-input-placeholder {
+.search input::-ms-input-placeholder {
   color: var(--color-white);
   opacity: .85
 }
-.search label input::placeholder {
+.search input::placeholder {
   color: var(--color-white);
   opacity: .85
 }
 @media (max-width:768px) {
-  .search label input {
+  .search input {
     max-width: 110px;
     font-size: 14px
   }
-}
-.search label:focus-within {
-  color: var(--color-violet)
 }
 .search__btn {
   margin-right: 6px;
@@ -1472,7 +1469,7 @@ ul {
     background-color: rgba(194,131,243,.4);
     background-blend-mode: multiply
   }
-  .search label input {
+  .search input {
     max-width: 80px;
     font-size: 10px
   }
@@ -1482,7 +1479,16 @@ ul {
   }
 }
 .search:focus-within {
-  outline: 2px solid var(--color-krayola)
+  outline: 2px solid var(--color-krayola);
+  color: var(--color-violet)
+}
+@media (min-width:577px) {
+  .search:hover {
+    color: var(--color-violet)
+  }
+  .search:hover input {
+    border-color: currentColor
+  }
 }
 .search--mobile {
   position: absolute;
@@ -1499,7 +1505,8 @@ ul {
 }
 @media (max-width:1200px) {
   .search--mobile {
-    display: block
+    display: flex;
+    align-items: unset
   }
 }
 @media (max-width:576px) {
@@ -1874,12 +1881,6 @@ ul {
   text-decoration: none
 }
 @media (min-width:577px) {
-  .search label:hover {
-    color: var(--color-violet)
-  }
-  .search label:hover input {
-    border-color: currentColor
-  }
   .hero__btn:hover {
     border-color: #d1a9f0;
     color: var(--color-white)
