@@ -48,4 +48,8 @@ function init() {
   myMap.controls.add(geolocationControl);
   myMap.controls.add(zoomControl);
   myMap.geoObjects.add(myPlacemark);
+  if (!isTablet) {
+    myMap.behaviors
+      .disable(['drag', 'rightMouseButtonMagnifier'])
+  }
 }

@@ -124,7 +124,7 @@ var eventsSlider = new Swiper('.events-slider', {
 
 // включение и выключение слайдеров в блоках "События" и "Издания" в зависимости от ширины экрана
 export function sliders(width) {
-  if (width < 576) {
+  if (width <= 576) {
     if (editionsSlider.initialized === true) {
       editionsSlider.destroy(false);
     }
@@ -132,7 +132,7 @@ export function sliders(width) {
       item.style.display = 'block';
     })
     eventsSlider.init();
-  } else if (width >= 576) {
+  } else if (width > 576) {
     if (eventsSlider.initialized === true) {
       eventsSlider.destroy(false);
     }

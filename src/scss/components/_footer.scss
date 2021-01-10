@@ -32,11 +32,14 @@
 
   &__link {
     display: block;
-    width: 45px;
-    height: 45px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+
+    svg {
+      display: block;
+      width: 45px;
+      height: 45px;
+      fill: var(--color-telegrey);
+      transition: fill 0.3s;
+    }
 
     &:not(:last-child) {
       margin-right: 20px;
@@ -46,21 +49,27 @@
       }
     }
 
-    &--vk {
-      background-image: url("../img/footer/vk.svg");
+    &:hover {
+      @include exclude-xs {
+        svg {
+          fill: var(--color-amethyst);
+        }
+      }
     }
 
-    &--instagram {
-      background-image: url("../img/footer/instagram.svg");
-    }
-
-    &--fb {
-      background-image: url("../img/footer/fb.svg");
+    &:active {
+      @include xs {
+        svg {
+          fill: var(--color-krayola);
+        }
+      }
     }
 
     @include xs {
-      width: 25px;
-      height: 25px;
+      svg {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }

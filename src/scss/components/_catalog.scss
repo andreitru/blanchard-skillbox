@@ -174,7 +174,7 @@
   &__left {
     width: 46.9%;
 
-    @include lg {
+    @include lg-max {
       width: 40%;
     }
 
@@ -191,7 +191,7 @@
   &__right {
     width: 50%;
 
-    @include lg {
+    @include lg-max {
       width: 57%;
     }
 

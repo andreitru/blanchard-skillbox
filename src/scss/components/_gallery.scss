@@ -208,10 +208,10 @@
     width: 100%;
 
     @include lg-max {
-      margin-bottom: 340px;
+      margin-bottom: 28.65vw;
     }
 
-    @include lg {
+    @include mobile-sm {
       margin-bottom: 0;
     }
   }

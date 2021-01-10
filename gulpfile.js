@@ -43,7 +43,7 @@ const resources = () => {
 }
 
 const imgToApp = () => {
-	return src(['./src/img/**/**.jpg', './src/img/**/**.png', './src/img/**/**.jpeg', './src/img/**/**.svg', './src/img/**/**.ico'])
+  return src(['./src/img/**/**.jpg', './src/img/**/**.png', './src/img/**/**.jpeg', './src/img/**/**.svg', './src/img/**/**.ico'])
     .pipe(dest('./app/img'))
 }
 
@@ -105,7 +105,8 @@ const checkWeight = (fontname) => {
   return weight;
 }
 
-const cb = () => {}
+const cb = () => {
+}
 
 let srcFonts = './src/scss/_fonts.scss';
 let appFonts = './app/fonts/';
@@ -118,13 +119,13 @@ const fontsStyle = (done) => {
     if (items) {
       let c_fontname;
       for (var i = 0; i < items.length; i++) {
-				let fontname = items[i].split('.');
-				fontname = fontname[0];
+        let fontname = items[i].split('.');
+        fontname = fontname[0];
         let font = fontname.split('-')[0];
         let weight = checkWeight(fontname);
 
         if (c_fontname != fontname) {
-          fs.appendFile(srcFonts, '@include font-face("' + font + '", "' + fontname + '", ' + weight +');\r\n', cb);
+          fs.appendFile(srcFonts, '@include font-face("' + font + '", "' + fontname + '", ' + weight + ');\r\n', cb);
         }
         c_fontname = fontname;
       }
@@ -147,7 +148,7 @@ const styles = () => {
       cascade: false,
     }))
     .pipe(cleanCSS({
-      level: 2,
+      level: 1,
       format: 'beautify'
     }))
     .pipe(sourcemaps.write('.'))
@@ -210,7 +211,7 @@ const watchFiles = () => {
 }
 
 const clean = () => {
-	return del(['app/*'])
+  return del(['app/*'])
 }
 
 exports.fileinclude = htmlInclude;
@@ -247,7 +248,7 @@ const stylesBuild = () => {
       cascade: false,
     }))
     .pipe(cleanCSS({
-      level: 2,
+      level: 1,
       format: 'beautify'
     }))
     .pipe(dest('./app/css/'))
@@ -256,36 +257,36 @@ const stylesBuild = () => {
 const scriptsBuild = () => {
   return src('./src/js/main.js')
     .pipe(webpackStream(
-
-        {
-          mode: 'development',
-          output: {
-            filename: 'main.js',
-          },
-          module: {
-            rules: [{
-              test: /\.m?js$/,
-              exclude: /(node_modules|bower_components)/,
-              use: {
-                loader: 'babel-loader',
-                options: {
-                  presets: ['@babel/preset-env']
-                }
+      {
+        mode: 'development',
+        output: {
+          filename: 'main.js',
+        },
+        module: {
+          rules: [{
+            test: /\.m?js$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env']
               }
-            }]
-          },
-        }))
-      .on('error', function (err) {
-        console.error('WEBPACK ERROR', err);
-        this.emit('end'); // Don't stop the rest of the task
-      })
+            }
+          }]
+        },
+      }))
+    .on('error', function (err) {
+      console.error('WEBPACK ERROR', err);
+      this.emit('end'); // Don't stop the rest of the task
+    })
     .pipe(uglify().on("error", notify.onError()))
     .pipe(dest('./app/js'))
 }
 
 const cache = () => {
   return src('app/**/*.{css,js,svg,png,jpg,jpeg,woff2}', {
-    base: 'app'})
+    base: 'app'
+  })
     .pipe(rev())
     .pipe(revdel())
     .pipe(dest('app'))
@@ -340,9 +341,9 @@ const deploy = () => {
   ];
 
   return src(globs, {
-      base: './app',
-      buffer: false
-    })
+    base: './app',
+    buffer: false
+  })
     .pipe(conn.newer('')) // only upload newer files
     .pipe(conn.dest(''));
 }

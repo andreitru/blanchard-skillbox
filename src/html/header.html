@@ -1,145 +1,154 @@
 <header class="header">
-  <div class="header__top header-top">
-    <div class="container header-top__container">
-      <button class="burger btn-reset header__burger" aria-label="главное меню">
-        <span class="burger__line"></span>
-      </button>
-      <a href="#" class="header-top__logo">
-        <img src="img/logo.png" alt="Логотип Blanchard">
-      </a>
-      <div class="search search--mobile">
-        <button class="btn-reset search__btn search__btn--mobile" type="submit" aria-label="поиск по сайту">
-          <svg>
-            <use xlink:href="img/sprite.svg#search"></use>
-          </svg>
+    <div class="header__top header-top">
+      <div class="container header-top__container">
+        <button class="burger btn-reset header__burger" aria-label="главное меню">
+          <span class="burger__line"></span>
         </button>
-        <label for="search-mobile">
-          <input type="text" class="search__input input" id="search-mobile" placeholder="Поиск по сайту">
-        </label>
-      </div>
-      <nav class="nav header-top__nav">
-        <button class="btn-reset nav__close"></button>
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#about" class="nav__link link">О нас</a></li>
-          <li class="nav__item"><a href="#gallery" class="nav__link link">Галерея</a></li>
-          <li class="nav__item"><a href="#catalog" class="nav__link link">Каталог</a></li>
-          <li class="nav__item"><a href="#events" class="nav__link link">События</a></li>
-          <li class="nav__item"><a href="#editions" class="nav__link link">Издания</a></li>
-          <li class="nav__item"><a href="#projects" class="nav__link link">Проекты</a></li>
-          <li class="nav__item"><a href="#contacts" class="nav__link link">Контакты</a></li>
-        </ul>
-        <button class="btn-reset nav__btn">
-          <svg>
-            <use xlink:href="img/sprite.svg#login"></use>
-          </svg>
-          Войти
-        </button>
-      </nav>
-    </div>
-  </div>
-  <div class="header__bottom">
-    <div class="container header-bottom__container">
-      <div class="header-bottom__select">
-        <div class="header-select__realism header-select">
-          <div class="header-select__top" tabindex="0" role="combobox" aria-label="реализм" aria-expanded="false">
-            Реализм
+        <a href="#" class="header-top__logo">
+          <img src="img/logo.png" alt="Логотип Blanchard">
+        </a>
+        <div class="search search--mobile">
+          <button class="btn-reset search__btn search__btn--mobile" type="submit" aria-label="поиск по сайту">
             <svg>
-              <use xlink:href="img/sprite.svg#arrow"></use>
+              <use xlink:href="img/sprite.svg#search"></use>
             </svg>
-          </div>
-          <div class="header-select__dropdown">
-            <ul class="header-select__list">
-              <li class="header-select__item">Дадлез</li>
-              <li class="header-select__item">Ерёмин</li>
-            </ul>
-          </div>
-        </div>
-        <div class="header-select__impressionism header-select">
-          <div class="header-select__top" role="combobox" tabindex="0" aria-label="импрессионизм" aria-expanded="false">
-            Импрессионизм
+          </button>
+          <label for="search-mobile">
+            <input type="text" class="search__input input" id="search-mobile" placeholder="Поиск по сайту">
+          </label>
+          <button class="btn-reset search__close">
             <svg>
-              <use xlink:href="img/sprite.svg#arrow"></use>
+              <use xlink:href="img/sprite.svg#X"></use>
             </svg>
-          </div>
-          <div class="header-select__dropdown">
-            <ul class="header-select__list">
-              <li class="header-select__item">Мане</li>
-              <li class="header-select__item">Моне</li>
-              <li class="header-select__item">Ренуар</li>
-              <li class="header-select__item">Дега</li>
-              <li class="header-select__item">Моризо</li>
-              <li class="header-select__item">Писсарро</li>
-            </ul>
-          </div>
+          </button>
         </div>
-
-        <div class="header-select__post-impressionism header-select">
-          <div class="header-select__top" role="combobox" tabindex="0" aria-label="постимпрессионизм"
-               aria-expanded="false">Постимпрессионизм
+        <nav class="nav header-top__nav">
+          <button class="btn-reset nav__close">
             <svg>
-              <use xlink:href="img/sprite.svg#arrow"></use>
+              <use xlink:href="img/sprite.svg#X"></use>
             </svg>
-          </div>
-          <div class="header-select__dropdown">
-            <ul class="header-select__list">
-              <li class="header-select__item">Сезанн</li>
-              <li class="header-select__item">Дюбуа-Пилле</li>
-              <li class="header-select__item">Гоген</li>
-              <li class="header-select__item">Мырквичка</li>
-              <li class="header-select__item">Ангран</li>
-              <li class="header-select__item">Ван Гог</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="header-select__vanguard header-select">
-          <div class="header-select__top" role="combobox" tabindex="0" aria-label="авангард" aria-expanded="false">
-            Авангард
+          </button>
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#about" class="nav__link link">О нас</a></li>
+            <li class="nav__item"><a href="#gallery" class="nav__link link">Галерея</a></li>
+            <li class="nav__item"><a href="#catalog" class="nav__link link">Каталог</a></li>
+            <li class="nav__item"><a href="#events" class="nav__link link">События</a></li>
+            <li class="nav__item"><a href="#editions" class="nav__link link">Издания</a></li>
+            <li class="nav__item"><a href="#projects" class="nav__link link">Проекты</a></li>
+            <li class="nav__item"><a href="#contacts" class="nav__link link">Контакты</a></li>
+          </ul>
+          <button class="btn-reset nav__btn">
             <svg>
-              <use xlink:href="img/sprite.svg#arrow"></use>
+              <use xlink:href="img/sprite.svg#login"></use>
             </svg>
-          </div>
-          <div class="header-select__dropdown">
-            <ul class="header-select__list">
-              <li class="header-select__item">Малевич</li>
-              <li class="header-select__item">Кандинский</li>
-              <li class="header-select__item">Татлин</li>
-              <li class="header-select__item">Родченко</li>
-              <li class="header-select__item">Гончарова</li>
-              <li class="header-select__item">Попова</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="header-select__futurism header-select">
-          <div class="header-select__top" role="combobox" tabindex="0" aria-label="футуризм" aria-expanded="false">
-            Футуризм
-            <svg>
-              <use xlink:href="img/sprite.svg#arrow"></use>
-            </svg>
-          </div>
-          <div class="header-select__dropdown">
-            <ul class="header-select__list">
-              <li class="header-select__item">Тинторетто</li>
-              <li class="header-select__item">Фридрих</li>
-              <li class="header-select__item">Леонардо</li>
-              <li class="header-select__item">Вероккьо</li>
-              <li class="header-select__item">Бала</li>
-              <li class="header-select__item">Боччиони</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="header-bottom__search search">
-        <button class="btn-reset search__btn" type="submit" aria-label="поиск по сайту">
-          <svg>
-            <use xlink:href="img/sprite.svg#search"></use>
-          </svg>
-        </button>
-        <label for="search">
-          <input type="search" id="search" class="search__input input" placeholder="Поиск по сайту">
-        </label>
+            Войти
+          </button>
+        </nav>
       </div>
     </div>
-  </div>
-</header>
+    <div class="header__bottom">
+      <div class="container header-bottom__container">
+        <div class="header-bottom__select">
+          <div class="header-select__realism header-select">
+            <div class="header-select__top" tabindex="0" role="combobox" aria-label="реализм" aria-expanded="false">
+              Реализм
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="header-select__dropdown">
+              <ul class="header-select__list">
+                <li class="header-select__item">Дадлез</li>
+                <li class="header-select__item">Ерёмин</li>
+              </ul>
+            </div>
+          </div>
+          <div class="header-select__impressionism header-select">
+            <div class="header-select__top" role="combobox" tabindex="0" aria-label="импрессионизм" aria-expanded="false">
+              Импрессионизм
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="header-select__dropdown">
+              <ul class="header-select__list">
+                <li class="header-select__item">Мане</li>
+                <li class="header-select__item">Моне</li>
+                <li class="header-select__item">Ренуар</li>
+                <li class="header-select__item">Дега</li>
+                <li class="header-select__item">Моризо</li>
+                <li class="header-select__item">Писсарро</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="header-select__post-impressionism header-select">
+            <div class="header-select__top" role="combobox" tabindex="0" aria-label="постимпрессионизм"
+                 aria-expanded="false">Постимпрессионизм
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="header-select__dropdown">
+              <ul class="header-select__list">
+                <li class="header-select__item">Сезанн</li>
+                <li class="header-select__item">Дюбуа-Пилле</li>
+                <li class="header-select__item">Гоген</li>
+                <li class="header-select__item">Мырквичка</li>
+                <li class="header-select__item">Ангран</li>
+                <li class="header-select__item">Ван Гог</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="header-select__vanguard header-select">
+            <div class="header-select__top" role="combobox" tabindex="0" aria-label="авангард" aria-expanded="false">
+              Авангард
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="header-select__dropdown">
+              <ul class="header-select__list">
+                <li class="header-select__item">Малевич</li>
+                <li class="header-select__item">Кандинский</li>
+                <li class="header-select__item">Татлин</li>
+                <li class="header-select__item">Родченко</li>
+                <li class="header-select__item">Гончарова</li>
+                <li class="header-select__item">Попова</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="header-select__futurism header-select">
+            <div class="header-select__top" role="combobox" tabindex="0" aria-label="футуризм" aria-expanded="false">
+              Футуризм
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="header-select__dropdown">
+              <ul class="header-select__list">
+                <li class="header-select__item">Тинторетто</li>
+                <li class="header-select__item">Фридрих</li>
+                <li class="header-select__item">Леонардо</li>
+                <li class="header-select__item">Вероккьо</li>
+                <li class="header-select__item">Бала</li>
+                <li class="header-select__item">Боччиони</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom__search search">
+          <button class="btn-reset search__btn" type="submit" aria-label="поиск по сайту">
+            <svg>
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
+          <label for="search">
+            <input type="search" id="search" class="search__input input" placeholder="Поиск по сайту">
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
