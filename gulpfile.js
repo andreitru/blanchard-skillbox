@@ -148,7 +148,7 @@ const styles = () => {
       cascade: false,
     }))
     .pipe(cleanCSS({
-      level: 1,
+      level: 0,
       format: 'beautify'
     }))
     .pipe(sourcemaps.write('.'))

@@ -1,16 +1,44 @@
 import '../vendor/yandex-map';
 
+export let myMap;
+
+export function map(width) {
+  deviceWidth = width;
+  if (width < 1200) {
+    myMap.behaviors.disable(['drag', 'rightMouseButtonMagnifier']);
+    myMap.controls.remove(geolocationControl);
+    myMap.controls.remove(zoomControl);
+  } else {
+    myMap.behaviors.enable(['drag', 'rightMouseButtonMagnifier']);
+    myMap.controls.add(geolocationControl);
+    myMap.controls.add(zoomControl);
+  }
+  changeCenter(width);
+  myMap.setCenter(center);
+}
+
+let center = [55.764010351657944, 37.62781575946036];
+
+let deviceWidth = document.body.clientWidth;
+
+let geolocationControl;
+let zoomControl;
+
+function changeCenter(width) {
+  if (width < 1200) {
+    center = [55.764010351657944, 37.61];
+  } else if (width < 768) {
+    center = [55.764010351657944, 37.59];
+  }
+}
+
 ymaps.ready(init);
 
 function init() {
-  let center = [55.764010351657944, 37.62781575946036];
-  if (document.body.clientWidth < 1200) {
-    center = [55.764010351657944, 37.61];
-  } else if (document.body.clientWidth < 768) {
-    center = [55.764010351657944, 37.59];
-  }
 
-  var myMap = new ymaps.Map("map", {
+  changeCenter(deviceWidth);
+
+  myMap = new ymaps.Map("map", {
     center: center,
     zoom: 14,
     controls: [],
@@ -22,34 +50,33 @@ function init() {
     iconImageSize: [20, 20],
   })
 
-  let isTablet = document.body.clientWidth > 1024;
-
-  var geolocationControl = new ymaps.control.GeolocationControl({
+  geolocationControl = new ymaps.control.GeolocationControl({
     options: {
       position: {
         right: 15,
         top: 330
       },
-      visible: isTablet
     }
-  })
+  });
 
-  var zoomControl = new ymaps.control.ZoomControl({
+  zoomControl = new ymaps.control.ZoomControl({
     options: {
       size: 'small',
       position: {
         right: 15,
         top: 260
       },
-      visible: isTablet
     },
   });
 
-  myMap.controls.add(geolocationControl);
-  myMap.controls.add(zoomControl);
   myMap.geoObjects.add(myPlacemark);
-  if (!isTablet) {
-    myMap.behaviors
-      .disable(['drag', 'rightMouseButtonMagnifier'])
+
+  let isTablet = deviceWidth < 1200;
+
+  if (isTablet) {
+    myMap.behaviors.disable(['drag', 'rightMouseButtonMagnifier']);
+  } else if (!isTablet) {
+    myMap.controls.add(geolocationControl);
+    myMap.controls.add(zoomControl);
   }
 }

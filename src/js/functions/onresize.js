@@ -1,5 +1,6 @@
 import vars from "../_vars";
 import {sliders} from "../components/sliders";
+import {map, myMap} from "../components/map";
 
 // изменение высоты списка в аккордеоне (блок "Каталог") в зависимости от ширины экрана
 function changeListHeight(width) {
@@ -43,6 +44,9 @@ export function onResize() {
   changeListHeight(width);
   changeCategoryHeight(width);
   sliders(width);
+  if (myMap !== undefined) {
+    map(width);
+  }
 }
 
 window.onload = onResize;
