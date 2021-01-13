@@ -97,9 +97,15 @@
     transition: color 0.3s;
 
     &:hover {
-      @include exclude-xs {
-        color: var(--color-amethyst);
+      color: var(--color-amethyst);
+
+      @include xs {
+        color: var(--color-violet);
       }
+    }
+
+    &:active {
+      @include active;
     }
   }
 
@@ -144,6 +150,10 @@
 
     &:hover {
       @include hover;
+
+      @include xs {
+        color: var(--color-white);
+      }
     }
 
     &:active {
@@ -179,6 +189,10 @@
 
     &:hover {
       @include hover;
+
+      @include xs {
+        color: var(--color-light-gray);
+      }
     }
 
     &:active {
@@ -297,9 +311,13 @@
       }
 
       &:hover {
-        @include exclude-xs {
+        &::before {
+          opacity: 1;
+        }
+
+        @include xs {
           &::before {
-            opacity: 1;
+            opacity: 0;
           }
         }
       }

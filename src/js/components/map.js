@@ -5,11 +5,11 @@ export let myMap;
 export function map(width) {
   deviceWidth = width;
   if (width < 1200) {
-    myMap.behaviors.disable(['drag', 'rightMouseButtonMagnifier']);
+    myMap.behaviors.disable(['drag', 'rightMouseButtonMagnifier', 'scrollZoom']);
     myMap.controls.remove(geolocationControl);
     myMap.controls.remove(zoomControl);
   } else {
-    myMap.behaviors.enable(['drag', 'rightMouseButtonMagnifier']);
+    myMap.behaviors.enable(['drag', 'rightMouseButtonMagnifier', 'scrollZoom']);
     myMap.controls.add(geolocationControl);
     myMap.controls.add(zoomControl);
   }
@@ -74,7 +74,7 @@ function init() {
   let isTablet = deviceWidth < 1200;
 
   if (isTablet) {
-    myMap.behaviors.disable(['drag', 'rightMouseButtonMagnifier']);
+    myMap.behaviors.disable(['drag', 'rightMouseButtonMagnifier', 'scrollZoom']);
   } else if (!isTablet) {
     myMap.controls.add(geolocationControl);
     myMap.controls.add(zoomControl);

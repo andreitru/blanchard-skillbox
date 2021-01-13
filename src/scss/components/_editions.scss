@@ -191,6 +191,10 @@
 
         &:hover {
           @include hover;
+
+          @include xs {
+            color: var(--color-white);
+          }
         }
 
         &:active {
@@ -377,8 +381,10 @@
     }
 
     &:hover {
-      @include exclude-xs {
-        background-color: var(--color-amethyst);
+      background-color: var(--color-amethyst);
+
+      @include xs {
+        background-color: rgba(157, 92, 208, 0.5);
       }
     }
 
@@ -535,6 +541,13 @@ input[type="number"] {
   &__btn {
     padding: 8px 20px;
     color: var(--color-white);
+
+    &:hover {
+      @include xs {
+        color: var(--color-white);
+        background-color: transparent;
+      }
+    }
 
     @include xs {
       display: block;

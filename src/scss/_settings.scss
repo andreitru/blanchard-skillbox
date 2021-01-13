@@ -212,6 +212,15 @@ ul {
 
     &:hover {
       @include sliderBtnHover;
+
+      @include xs {
+        border-color: var(--color-dull-gray);
+        background-color: var(--color-dull-gray);
+
+        &::after {
+          color: var(--color-white);
+        }
+      }
     }
 
     &:active {

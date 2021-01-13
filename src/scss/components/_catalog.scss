@@ -100,8 +100,10 @@
     }
 
     &:hover {
-      @include exclude-xs {
-        filter: drop-shadow(0 0 20px rgba(157, 92, 208, 0.7));
+      filter: drop-shadow(0 0 20px rgba(157, 92, 208, 0.7));
+
+      @include xs {
+        filter: none;
       }
     }
 
@@ -303,14 +305,25 @@
     &:hover {
       .accordion__subtitle {
         @include hover;
+
+        @include xs {
+          color: var(--color-signal-black);
+        }
       }
 
-      @include exclude-xs {
-        span {
-          @include sliderBtnHover;
+      span {
+        @include sliderBtnHover;
 
-          svg {
-            fill: var(--color-white);
+        @include xs {
+          border-color: var(--color-smoky-white);
+          background-color: var(--color-smoky-white);
+        }
+
+        svg {
+          fill: var(--color-white);
+
+          @include xs {
+            fill: var(--color-black);
           }
         }
       }
@@ -402,9 +415,12 @@
     transition: color 0.3s;
 
     &:hover {
-      @include exclude-xs {
-        text-decoration: underline;
-        color: var(--color-amethyst);
+      text-decoration: underline;
+      color: var(--color-amethyst);
+
+      @include xs {
+        text-decoration: none;
+        color: var(--color-signal-black);
       }
     }
 

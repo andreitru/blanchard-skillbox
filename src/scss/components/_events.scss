@@ -140,9 +140,11 @@
     transition: font-weight 0.3s, color 0.3s;
 
     &:hover {
-      @include exclude-xs {
-        font-weight: 600;
-        color: var(--color-amethyst);
+      font-weight: 600;
+      color: var(--color-amethyst);
+
+      @include xs {
+        font-weight: 400;
       }
     }
 

@@ -111,9 +111,13 @@
     }
 
     &:hover {
-      @include exclude-xs {
-        border-color: #d1a9f0;
+      border-color: #d1a9f0;
+      color: var(--color-white);
+
+      @include xs {
+        border-color: var(--color-amethyst);
         color: var(--color-white);
+        background-color: var(--color-amethyst);
       }
     }
 

@@ -7,21 +7,19 @@
         <a href="#" class="header-top__logo">
           <img src="img/logo.png" alt="Логотип Blanchard">
         </a>
-        <div class="search search--mobile">
+        <form class="search search--mobile">
           <button class="btn-reset search__btn search__btn--mobile" type="submit" aria-label="поиск по сайту">
             <svg>
               <use xlink:href="img/sprite.svg#search"></use>
             </svg>
           </button>
-          <label for="search-mobile">
-            <input type="text" class="search__input input" id="search-mobile" placeholder="Поиск по сайту">
-          </label>
+          <input type="text" class="search__input input" id="search-mobile" placeholder="Поиск по сайту">
           <button class="btn-reset search__close">
             <svg>
               <use xlink:href="img/sprite.svg#X"></use>
             </svg>
           </button>
-        </div>
+        </form>
         <nav class="nav header-top__nav">
           <button class="btn-reset nav__close">
             <svg>
@@ -48,8 +46,8 @@
     </div>
     <div class="header__bottom">
       <div class="container header-bottom__container">
-        <div class="header-bottom__select">
-          <div class="header-select__realism header-select">
+        <ul class="header-bottom__select">
+          <li class="header-select__realism header-select">
             <div class="header-select__top" tabindex="0" role="combobox" aria-label="реализм" aria-expanded="false">
               Реализм
               <svg>
@@ -62,8 +60,8 @@
                 <li class="header-select__item">Ерёмин</li>
               </ul>
             </div>
-          </div>
-          <div class="header-select__impressionism header-select">
+          </li>
+          <li class="header-select__impressionism header-select">
             <div class="header-select__top" role="combobox" tabindex="0" aria-label="импрессионизм" aria-expanded="false">
               Импрессионизм
               <svg>
@@ -80,9 +78,9 @@
                 <li class="header-select__item">Писсарро</li>
               </ul>
             </div>
-          </div>
+          </li>
 
-          <div class="header-select__post-impressionism header-select">
+          <li class="header-select__post-impressionism header-select">
             <div class="header-select__top" role="combobox" tabindex="0" aria-label="постимпрессионизм"
                  aria-expanded="false">Постимпрессионизм
               <svg>
@@ -99,9 +97,9 @@
                 <li class="header-select__item">Ван Гог</li>
               </ul>
             </div>
-          </div>
+          </li>
 
-          <div class="header-select__vanguard header-select">
+          <li class="header-select__vanguard header-select">
             <div class="header-select__top" role="combobox" tabindex="0" aria-label="авангард" aria-expanded="false">
               Авангард
               <svg>
@@ -118,9 +116,9 @@
                 <li class="header-select__item">Попова</li>
               </ul>
             </div>
-          </div>
+          </li>
 
-          <div class="header-select__futurism header-select">
+          <li class="header-select__futurism header-select">
             <div class="header-select__top" role="combobox" tabindex="0" aria-label="футуризм" aria-expanded="false">
               Футуризм
               <svg>
@@ -137,18 +135,16 @@
                 <li class="header-select__item">Боччиони</li>
               </ul>
             </div>
-          </div>
-        </div>
-        <div class="header-bottom__search search">
+          </li>
+        </ul>
+        <form class="header-bottom__search search">
           <button class="btn-reset search__btn" type="submit" aria-label="поиск по сайту">
             <svg>
               <use xlink:href="img/sprite.svg#search"></use>
             </svg>
           </button>
-          <label for="search">
-            <input type="search" id="search" class="search__input input" placeholder="Поиск по сайту">
-          </label>
-        </div>
+          <input type="search" id="search" class="search__input input" placeholder="Поиск по сайту">
+        </form>
       </div>
     </div>
   </header>

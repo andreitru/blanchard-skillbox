@@ -220,6 +220,17 @@
     &::after {
       color: var(--color-black);
     }
+
+    &:hover {
+      @include xs {
+        border-color: var(--color-smoky-white);
+        background-color: var(--color-smoky-white);
+
+        &::after {
+          color: var(--color-black);
+        }
+      }
+    }
   }
 
   @include xs {

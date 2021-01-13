@@ -1,10 +1,6 @@
 @mixin hover {
   text-decoration: none;
-
-  @include exclude-xs {
-    text-decoration: none;
-    color: var(--color-violet);
-  }
+  color: var(--color-violet);
 }
 
 @mixin focus {
@@ -19,13 +15,11 @@
 }
 
 @mixin sliderBtnHover {
-  @include exclude-xs {
-    border-color: var(--color-amethyst);
-    background-color: var(--color-amethyst);
+  border-color: var(--color-amethyst);
+  background-color: var(--color-amethyst);
 
-    &::after {
-      color: var(--color-white);
-    }
+  &::after {
+    color: var(--color-white);
   }
 }
 
@@ -41,12 +35,10 @@
 }
 
 @mixin hoverBtn {
-  @include exclude-xs {
-    background-color: var(--color-amethyst);
+  background-color: var(--color-amethyst);
 
-    span {
-      color: var(--color-white);
-    }
+  span {
+    color: var(--color-white);
   }
 }
 

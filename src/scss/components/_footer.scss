@@ -50,9 +50,13 @@
     }
 
     &:hover {
-      @include exclude-xs {
+      svg {
+        fill: var(--color-amethyst);
+      }
+
+      @include xs {
         svg {
-          fill: var(--color-amethyst);
+          fill: var(--color-telegrey);
         }
       }
     }

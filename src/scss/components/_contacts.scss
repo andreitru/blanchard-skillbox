@@ -114,8 +114,10 @@
       }
 
       &:hover {
-        @include exclude-xs {
-          filter: drop-shadow(0 0 20px rgba(157, 92, 208, 0.7));
+        filter: drop-shadow(0 0 20px rgba(157, 92, 208, 0.7));
+
+        @include xs {
+          filter: none;
         }
       }
 
@@ -141,6 +143,16 @@
     padding: 18px 35px;
     font-weight: 600;
     color: var(--color-amethyst);
+
+    &:hover {
+      @include xs {
+        background-color: transparent;
+
+        span {
+          color: var(--color-amethyst);
+        }
+      }
+    }
 
     @include xs {
       margin-top: 10px;
@@ -183,8 +195,10 @@
     transition: filter 0.3s;
 
     &:hover {
-      @include exclude-xs {
-        filter: drop-shadow(0 0 20px rgba(157, 92, 208, 0.7));
+      filter: drop-shadow(0 0 20px rgba(157, 92, 208, 0.7));
+
+      @include xs {
+        filter: none;
       }
     }
 

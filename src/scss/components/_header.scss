@@ -118,8 +118,20 @@
     color: var(--color-white);
     transition: color 0.3s;
 
+    &:focus {
+      @include focus;
+    }
+
     &:hover {
-      text-decoration: none;
+      @include hover;
+
+      @include xs {
+        color: var(--color-white);
+      }
+    }
+
+    &:active {
+      @include active;
     }
 
     @include md {
@@ -150,6 +162,10 @@
 
     &:hover {
       @include hover;
+
+      @include xs {
+        color: var(--color-white);
+      }
     }
 
     &:active {
@@ -190,16 +206,6 @@
     svg {
       width: 100%;
       height: 100%;
-    }
-
-    &:hover {
-      @include exclude-xs {
-        border-color: var(--color-violet);
-
-        &::after {
-          border-color: var(--color-violet);
-        }
-      }
     }
 
     @include xs {
@@ -293,6 +299,10 @@
 
     &:hover {
       @include hover;
+
+      @include xs {
+        color: var(--color-white);
+      }
     }
 
     &:active {
@@ -331,9 +341,11 @@
     }
 
     &:hover {
-      @include exclude-xs {
-        outline: 2px solid var(--color-amethyst);
-        outline-offset: -2px;
+      outline: 2px solid var(--color-amethyst);
+      outline-offset: -2px;
+
+      @include xs {
+        outline: none;
       }
     }
 
@@ -452,12 +464,14 @@
   }
 
   &:hover {
-    @include exclude-xs {
-      color: var(--color-violet);
+    color: var(--color-violet);
 
-      input {
-        border-color: currentColor;
-      }
+    input {
+      border-color: currentColor;
+    }
+
+    @include xs {
+      color: var(--color-white);
     }
   }
 
